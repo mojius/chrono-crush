@@ -145,39 +145,70 @@ nextSelection:
   # ^ or we can have Teddie appear already, and just have her as an interaction for story purposes. No confession or anything.
 
   - pro says: Okay, who to talk to next...
-  - choice:
-    # ------------------------------
-    # Thea decision tree
-    - if ({thea_count} == 1): 
+  # ------------------------------
+  # Decision tree
+  - if ({thea_count} == 1 && ({asellus_count} == 0)): 
+    - choice:
       - "Let's talk to Thea again.":
         - scene: roundTwoThea
-    - else if ({thea_count} == 0):
+      - "Talk to Asellus, the philosopher.":
+        - scene: roundOneAsellus
+
+  - if (({thea_count} == 0) && ({asellus_count} == 1)):
+    - choice:
       - "Talk to Thea, the futuristic robot lady.":
         - scene: roundOneThea
-    - else if ({thea_count} >= 2):
-      - "I'll try talking to Thea once more.":
-        - scene: postRoundThea
-    # ------------------------------
-    
-    # ------------------------------
-    # Asellus Decision Tree
-    - if ({asellus_count} == 1):
       - "Let's talk to Asellus again.":
         - scene: roundTwoAsellus
-    - else if ({asellus_count} == 0):
-      - "Talk to Asellus, the ancient Greek philosopher.":
+
+  - if(({thea_count} >= 2) && ({asellus_count} == 0)):
+    - choice:
+      - "I'll try talking to Thea once more.":
+        - scene: postRoundThea
+      - "Talk to Asellus, the philosopher.":
         - scene: roundOneAsellus
-    - else if ({asellus_count} >= 2):
+  
+  # ------------------------------
+
+  - if (({asellus_count} == 1) && ({thea_count} == 0)):
+    - choice:
+      - "Let's talk to Asellus again.":
+        - scene: roundTwoAsellus
+      - "Talk to Thea, the robot lady.":
+        - scene: roundOneThea
+
+  - if (({asellus_count} >= 2) && ({thea_count} == 0)):
+    - choice:
+      - "I'll try talking to Asellus again.":
+        - scene: postRoundAsellus
+      - "Talk to Thea, the robot lady.":
+        - scene: roundOneThea
+    
+  - if (({asellus_count} >= 2) && ({thea_count == 1})):
+    - choice:
       - "I'll try talking to Asellus once again.":
         - scene: postRoundAsellus
-    # ------------------------------
+      - "Let's talk to Thea again.":
+        - scene: roundTwoThea
+  # ------------------------------
 
-    # ------------------------------
-    # Add Teddie choice here once you talked to both Asellus and Thea twice
-    - if ({asellus_count} == 2):
-      - if ({thea_count} == 2):
-        - "I should talk to Teddie again":
-          - scene: postRoundTeddie
+  # ------------------------------
+  # Add Teddie choice here once you talked to both Asellus and Thea twice
+  - if (({asellus_count} == 2) && ({thea_count} == 2)):
+    - choice:
+      - "I'll try talking to Asellus again.":
+        - scene: postRoundAsellus
+      - "I'll try talking to Thea again.":
+        - scene: postRoundThea
+  
+  - if (({asellus_count} == 2) && ({thea_count} == 2) && ({teddie_count} == 2)):
+    - choice:
+      - "I should talk to Teddy again.":
+        - scene: postRoundTeddy
+      - "I'll try talking to Asellus again.":
+        - scene: postRoundAsellus
+      - "I'll try talking to Thea again.":
+        - scene: postRoundThea
 
 
 roundOneThea:
@@ -685,8 +716,8 @@ roundOneAsellus:
   - pro says: (All of it reflects a sensitivity you never knew was carried by the Ancient Greeks.)
   - pro says: (But soon, he is interrupted by another voice.)
 
-  - bots says: But Asellus...
-  - bots says: Just as a thought experiment, can you prove that the gods of your Pantheon exist?
+  - bot says: But Asellus...
+  - bot says: Just as a thought experiment, can you prove that the gods of your Pantheon exist?
 
   - ase says: Am I not in a vision granted by them now? That is proof enough.
 
@@ -785,53 +816,53 @@ roundOneAsellus:
 
       - scene: nextSelection
 
-  - "Make an argument for the past!":
-    - pro says: Asellus, explain why we might look to the past for guideance.
-    - ase says: Well.
-    - ase says: Do all men not consult the gods, who are of the past, to guide them?
-    - ase says: To find out what is godly?
+    - "Make an argument for the past!":
+      - pro says: Asellus, explain why we might look to the past for guideance.
+      - ase says: Well.
+      - ase says: Do all men not consult the gods, who are of the past, to guide them?
+      - ase says: To find out what is godly?
 
-    - ted says: Not really...
-    - ase says: Oh.
-    - ase says: Well then, I cannot tell you.
-    
-    - ted says: It's a bit of a silly question, because there wasn't much recorded civilization (italic)before(end) ancient Greece.
+      - ted says: Not really...
+      - ase says: Oh.
+      - ase says: Well then, I cannot tell you.
+      
+      - ted says: It's a bit of a silly question, because there wasn't much recorded civilization (italic)before(end) ancient Greece.
 
-    - ted says: So then, why not try to justify the virtues of your time?
+      - ted says: So then, why not try to justify the virtues of your time?
 
-    - ase says: Even that I cannot do.
-    - text: (He rubs his temples.)
-    - ase says: These wars between Athens and Sparta...
-    - ase says: I have seen soldiers return cart-bound bloody and slaughtered.
-    - ase says: Women in the streets shrieking for their lost husbands.
-    - ase says: I even once saw an entire (italic)polis(end) burn.
+      - ase says: Even that I cannot do.
+      - text: (He rubs his temples.)
+      - ase says: These wars between Athens and Sparta...
+      - ase says: I have seen soldiers return cart-bound bloody and slaughtered.
+      - ase says: Women in the streets shrieking for their lost husbands.
+      - ase says: I even once saw an entire (italic)polis(end) burn.
 
-    - ted says: Wow! did you serve?
-    - ase says: Oh, no, I...
-    - ase says: I'm protected by the noble couple I live with.
+      - ted says: Wow! did you serve?
+      - ase says: Oh, no, I...
+      - ase says: I'm protected by the noble couple I live with.
 
-    - ted says: Hm.
+      - ted says: Hm.
 
-    - ase says: But, is there hubris in the modern world?
+      - ase says: But, is there hubris in the modern world?
 
-    - ted says: I mean, it depends... But yeah, there's kind of a lot.
-    - ase says: When did people stop being godly?
+      - ted says: I mean, it depends... But yeah, there's kind of a lot.
+      - ase says: When did people stop being godly?
 
-    - ted says: (italic)Wellllll...(end)
-    - ted says: It was only in the last hundred years, but things are changing pretty fast in general.
+      - ted says: (italic)Wellllll...(end)
+      - ted says: It was only in the last hundred years, but things are changing pretty fast in general.
 
-    - text: (Asellus thinks for a long time.)
+      - text: (Asellus thinks for a long time.)
 
-    - ase says: Our actions and deeds have consequences that cannot be measured in brief episodes, but over years and lifetimes.
+      - ase says: Our actions and deeds have consequences that cannot be measured in brief episodes, but over years and lifetimes.
 
-    - ase says: If we do not establish a society that gives itself the time to weigh its successes and mistakes, then it is doomed to blind missteps forever.
+      - ase says: If we do not establish a society that gives itself the time to weigh its successes and mistakes, then it is doomed to blind missteps forever.
 
-    - ted says: Sheesh!
+      - ted says: Sheesh!
 
-    - bot says: That was very well-spoken of you, Asellus, I enjoyed your oration.
-    - ase says: Thank you, statue!
+      - bot says: That was very well-spoken of you, Asellus, I enjoyed your oration.
+      - ase says: Thank you, statue!
 
-    - scene: nextSelection
+      - scene: nextSelection
 
 
 roundTwoAsellus:
@@ -1045,3 +1076,38 @@ confessionTwoAsellus:
   - ted says: (Are you serious right now...?)
   - text: And so, our two out-of-time individuals run off together to save the world.
   - text: But where does that leave you and Teddie...?
+
+postRoundThea:
+  - bot says: "What did you want to talk about?"
+  - choice:
+    - "Confess to Thea":
+      - scene: confessionTwoThea
+    - "Talk to Thea":
+      # Fill in dialogue
+      - "I have nothing to discuss anymore."
+    - "Nevermind, it's nothing":
+      - scene: nextSelection
+
+
+postRoundAsellus:
+  - ase says: "What did you want to talk about?"
+  - choice:
+    - "Confess to Asellus":
+      - scene: confessionTwoAsellus
+    - "Talk to Thea":
+      # Fill in dialogue
+      - "I have nothing to discuss anymore."
+    - "Nevermind, it's nothing":
+      - scene: nextSelection
+
+
+postRoundTeddy:
+  - ted says: "What did you want to talk about?"
+  - choice:
+    - "Confess to Thea":
+      - scene: confessionThreeThea
+    - "Talk to Thea":
+      # Fill in dialogue
+      - "I have nothing to discuss anymore."
+    - "Nevermind, it's nothing":
+      - scene: nextSelection
