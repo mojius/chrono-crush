@@ -2,6 +2,7 @@
 A little dating sim with characters across past and future
 
 Created by: Ben Daly, Cassidy Aydin, Brandon Jack, and Addison Camacho
+
 Powered by: RenJS, created by lunafromthemoon
 
 RenJS main page here: https://renjs.net/index.html 
