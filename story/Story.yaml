@@ -216,6 +216,12 @@ roundOneThea:
     # Updating Thea talk count here.
     - var thea_count: 1
     # ------------------------------
+    - choice: 
+      - "Confess your love to Thea.":
+        - text: You decide to confess to Thea.
+        - scene: confessionZeroThea
+      - "Talk to Thea.":
+        - text: You decide to talk to Thea.
     - pro says: Thea, I think I'm going to talk to you first.
     - pro says: Make an argument for why we should look to the future for the success of humanity.
     - ted says: We're not world leaders or anything, this is for a school project.
@@ -315,6 +321,12 @@ roundTwoThea:
   - var thea_count: 2
   # ------------------------------
   - ted says: "What else do you want to ask Thea, {name}?"
+  - choice: 
+      - "Confess your love to Thea.":
+        - text: You decide to confess to Thea.
+        - scene: confessionOneThea
+      - "Ask Thea a question.":
+        - text: You decide to ask Thea a question.
   - choice:
     - "Have you ever been in love?":
       - pro says: Have you ever been in love, Thea?
@@ -1076,6 +1088,7 @@ confessionTwoAsellus:
   - ted says: (Are you serious right now...?)
   - text: And so, our two out-of-time individuals run off together to save the world.
   - text: But where does that leave you and Teddie...?
+
 
 postRoundThea:
   - bot says: "What did you want to talk about?"
