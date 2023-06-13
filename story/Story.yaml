@@ -66,6 +66,7 @@ startTimeMachine:
   - show ted: WITH FADE
   - text: You watch as Teddie goes over to the two machines, tinkering with them and turning them on.
   - text: Before long, two giant and imposing portals open up! From the left portal emerges a stout figure from the ether...
+  - effect SHAKE:
   - wait: 1000
   # - show: ase WITH FADE
   - ase says: Αυτός είναι ο Άδης
@@ -89,6 +90,7 @@ startTimeMachine:
   - ted says: Now, before any other silly things can come out of your mouth, let me turn the other time machine on...
   - text: Teddie dutifully runs over to the other time machine, configuring it via their phone to draw someone from the distant future! (end)
   - text: With a flash of light, from out of the portal steps a beautiful, full figure!
+  - show bot: WITH FADE
   - bot says: Hello! I am a peaceful android citizen named THEA-800-CGAT, a Cognitive Generative Actively-trained Transformer.
   - bot says: This does not seem to be a simulation or a kidnapping, so I assume I am no longer in my home continuity.
   - ted says: And what continuity was that?
