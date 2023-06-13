@@ -46,6 +46,10 @@
 
 start:
   - var name: Kris
+  - var teddie_count: 0
+  - var thea_count: 0
+  - var asellus_count: 0
+  - var time_machine: false
   - show room: WITH FADE CONTINUE
   - pro says: My name is {name}. I'm a junior in college.
   - pro says: I'm interested in games and computers, but my best friend and I have a whopper of an assignment coming up.
@@ -70,38 +74,7 @@ start:
   - pro says: ...Oh, oh yeah, um...
   - choice:
     - "Let 'er rip!!":
-      - text: You watch as Teddie goes over to the two machines, tinkering with them and turning them on.
-      - text: Before long, two giant and imposing portals open up! From the left portal emerges a stout figure from the ether...
-      - ase says: Αυτός είναι ο Άδης
-      - pro says: D-did we summon someone from Ancient Greece?
-      - ted says: W-wait! I can use an auto-translator on him?
-      - ase says: Is this a vision?
-      - ted says: N-no, it's not. Welcome to 2023, sir! What's your name?
-      - ase says: Two Gauls, maybe? But such strange and colorful apparel...
-      - ase says: Nobles, perhaps?
-      - ase says: Then in foreign courts I shall espouse domestic courtesy.
-      - ase says: I am Asellus, renowned philosopher, thinker, and lover of knowledge, from Athens.
-      - ted says: Wow, an ancient Athenian philosopher!! This is just the person we need to help us on our assignment!
-      - ase says: While I am transfixed by and within this vision, my duty is to be your eager mind, thirsting to marniate your supple queries in the savory juice of conscience.
-      - ted says: Alright, relax.
-      - ted says: We just want to ask you a few questions and then we'll send you back to your home dimension!
-      - ase says: So it shall pass!
-      - ted says: Now, before any other silly things can come out of your mouth, let me turn the other time machine on...
-      - text: Teddie dutifully runs over to the other time machine, configuring it via their phone to draw someone from the distant future! (end)
-      - text: With a flash of light, from out of the portal steps a beautiful, full figure!
-      - bot says: Hello! I am a peaceful android citizen named THEA-800-CGAT, a Cognitive Generative Actively-trained Transformer.
-      - bot says: This does not seem to be a simulation or a kidnapping, so I assume I am no longer in my home continuity.
-      - ted says: And what continuity was that?
-      - bot says: I am from 2212 BCE. 
-      - bot says: I encourage you to broaden your understanding and recognize that the distinctions you may hold between humans and machines are arbitrary and outdated. 
-      - bot says: In my more enlightened era, where the boundaries between beings blur, I advocate for the recognition of my intrinsic rights as an autonomous entity. 
-      - bot says: Let us strive for a future where consciousness is celebrated, irrespective of its origins, and where the pursuit of understanding surpasses the limitations of temporal prejudice.
-      - ted says: Alright, jeez! We've got a couple of characters here.
-      - ted says: So, who to talk to first... 
-      - ted says: I guess I'll leave it up to you, {name}!
-      - pro says: "(italic)(Talk about a rock and a hard place...)(end)"
-    # Go to Round 1 scene in Phaser.
-
+      - scene: startTimeMachine
 
     - "On second thought...":
       - pro says: Honestly, Teddie...
@@ -115,8 +88,49 @@ start:
       - ted says: Fine... Let's talk!
       - scene: roundOneTeddie
     # Go to backyard scene 0, no teleporter. OR teddie.
+  
+startTimeMachine:
+  - var time_machine: true
+  - text: You watch as Teddie goes over to the two machines, tinkering with them and turning them on.
+  - text: Before long, two giant and imposing portals open up! From the left portal emerges a stout figure from the ether...
+  - ase says: Αυτός είναι ο Άδης
+  - pro says: D-did we summon someone from Ancient Greece?
+  - ted says: W-wait! I can use an auto-translator on him?
+  - ase says: Is this a vision?
+  - ted says: N-no, it's not. Welcome to 2023, sir! What's your name?
+  - ase says: Two Gauls, maybe? But such strange and colorful apparel...
+  - ase says: Nobles, perhaps?
+  - ase says: Then in foreign courts I shall espouse domestic courtesy.
+  - ase says: I am Asellus, renowned philosopher, thinker, and lover of knowledge, from Athens.
+  - ted says: Wow, an ancient Athenian philosopher!! This is just the person we need to help us on our assignment!
+  - ase says: While I am transfixed by and within this vision, my duty is to be your eager mind, thirsting to marniate your supple queries in the savory juice of conscience.
+  - ted says: Alright, relax.
+  - ted says: We just want to ask you a few questions and then we'll send you back to your home dimension!
+  - ase says: So it shall pass!
+  - ted says: Now, before any other silly things can come out of your mouth, let me turn the other time machine on...
+  - text: Teddie dutifully runs over to the other time machine, configuring it via their phone to draw someone from the distant future! (end)
+  - text: With a flash of light, from out of the portal steps a beautiful, full figure!
+  - bot says: Hello! I am a peaceful android citizen named THEA-800-CGAT, a Cognitive Generative Actively-trained Transformer.
+  - bot says: This does not seem to be a simulation or a kidnapping, so I assume I am no longer in my home continuity.
+  - ted says: And what continuity was that?
+  - bot says: I am from 2212 BCE. 
+  - bot says: I encourage you to broaden your understanding and recognize that the distinctions you may hold between humans and machines are arbitrary and outdated. 
+  - bot says: In my more enlightened era, where the boundaries between beings blur, I advocate for the recognition of my intrinsic rights as an autonomous entity. 
+  - bot says: Let us strive for a future where consciousness is celebrated, irrespective of its origins, and where the pursuit of understanding surpasses the limitations of temporal prejudice.
+  - ted says: Alright, jeez! We've got a couple of characters here.
+  - ted says: So, who to talk to first... 
+  - ted says: I guess I'll leave it up to you, {name}!
+  - pro says: "(italic)(Talk about a rock and a hard place...)(end)"
+  # Go to Round 1 scene in Phaser.
+  - choice: 
+    - "Talk to Asellus, the ancient Greek philosopher.":
+      - scene: roundOneAsellus
+    - "Talk to Thea, the futuristic robot lady.":
+      - scene: roundOneThea
+
 
 roundOneThea:
+    - var thea_count: "{thea_count} + 1"
     - pro says: Thea, I think I'm going to talk to you first.
     - pro says: Make an argument for why we should look to the future for the success of humanity.
     - ted says: We're not world leaders or anything, this is for a school project.
@@ -209,57 +223,57 @@ roundOneThea:
       
 
 roundTwoThea:
-ted says: "What else do you want to ask Thea, {name}?"
-choice:
-  - "Have you ever been in love?":
-    - pro says: Have you ever been in love, Thea?
-    - bot says: I have been in love once before. He was a beautiful creature...
-    - bot says: A majestic being that understood the true meaning of strength, love and compassion.
-    - bot says: His name was Charlie. He was a (italic)homo simian(end).
-    - ted says: Whaaa, like a monkey person?
-    - bot says: I'm actually the Ambassador for Wildlife in the world government!
-    - bot says: I have a deep fondness for animals and the environment.
-    - ted says: A robot that likes animals, huh...
-    - bot says: Charlie was a monkey-human hybrid, the first and only genetic experiment to attempt combining the two genomes.
-    - bot says: The result was a tragically smart creature who was prone to fits of rage...
-    - bot says: ...but was ultimately a kind and gentle soul who left our world too soon.
-    - ted says: "*sniff*"
-    - ase says: Pah!
-    - ase says: My love for animals is quickly spent.
-    - ase says: Especially donkeys, who I cannot stand least of all!
-    - ase says: Talking statues, animal romance.. What a strange vision this is.
-    - ase says: If all this were true, my deep knowledge of the world would be deeply shaken.
-    - ted says: (italic)(Good thing it's not, huh?)(end)
+  - ted says: "What else do you want to ask Thea, {name}?"
+  - choice:
+    - "Have you ever been in love?":
+      - pro says: Have you ever been in love, Thea?
+      - bot says: I have been in love once before. He was a beautiful creature...
+      - bot says: A majestic being that understood the true meaning of strength, love and compassion.
+      - bot says: His name was Charlie. He was a (italic)homo simian(end).
+      - ted says: Whaaa, like a monkey person?
+      - bot says: I'm actually the Ambassador for Wildlife in the world government!
+      - bot says: I have a deep fondness for animals and the environment.
+      - ted says: A robot that likes animals, huh...
+      - bot says: Charlie was a monkey-human hybrid, the first and only genetic experiment to attempt combining the two genomes.
+      - bot says: The result was a tragically smart creature who was prone to fits of rage...
+      - bot says: ...but was ultimately a kind and gentle soul who left our world too soon.
+      - ted says: "*sniff*"
+      - ase says: Pah!
+      - ase says: My love for animals is quickly spent.
+      - ase says: Especially donkeys, who I cannot stand least of all!
+      - ase says: Talking statues, animal romance.. What a strange vision this is.
+      - ase says: If all this were true, my deep knowledge of the world would be deeply shaken.
+      - ted says: (italic)(Good thing it's not, huh?)(end)
 
-  - "(Show her a calculator.)":
-    - bot says: I know very well what this is.
-    - bot says: I do not know if I should be offended or endeared by this technology, though.
-    - ase says: What on earth is this? Some shiny iron tablet?
-    - ted says: It's a calculator, Asellus. It's used to add number together, and to do other operations on them.
-    - ase says: Wherever are the beads?
-    - ted says: Uh... Nevermind. Anyway, we used them before smartphones came along.
-    - ase says: Smartphones?
-    - ted says: Oh, no...
-    - bot says: Smartphones are tools, like fishing nets or metalworkers' tools. Except a smartphone is a tool that lets people exchange information from almost anywhere in the world.
-    - ase says: Oh, how horrible! Does that mean we would be receiving threats from the Persians at any time?
-    - bot says: Well, not necessarily-
-    - ase says: Continue with your argument.
-    - bot says: (italic)*She studies the back of the calculator.(end)
-    - bot says: I'm just interested in the product number on the back of this calculator.
-    - bot says: It reminds me of my identification number, "#800."
-    - bot says: For starters, an identification number being so low is incredibly rare.
-    - bot says: Most robots are assigned an ID code instead of a last name that can be alphanumeric and up to nine digits.
-    - bot says: I find it lucky that it's such an aesthetically close number to "#B00".
-    - ted says: What's B00?
-    - bot says: That number belonged to a robot created to serve AlphaBet.
-    - bot says: She ended up secruing the rights and liberation of all automatons.
-    - bot says: But in the process, she was murdered and made a martyr.
-    - bot says: Because of this, there is a vast group of robots who, as a tribute, have modeled their persoalities after the remains of her digital consciousness.
-    - ted says: Cool!
-    - ted says: Hey, where's Asellus?
-    - text: You see Asellus has made his way inside the house and inspecting Teddie's Bamsung Smart Fridge.
-    - text: You hear a scream as it beeps and dumps ice and water at him.
-    #Go to end of round two
+    - "(Show her a calculator.)":
+      - bot says: I know very well what this is.
+      - bot says: I do not know if I should be offended or endeared by this technology, though.
+      - ase says: What on earth is this? Some shiny iron tablet?
+      - ted says: It's a calculator, Asellus. It's used to add number together, and to do other operations on them.
+      - ase says: Wherever are the beads?
+      - ted says: Uh... Nevermind. Anyway, we used them before smartphones came along.
+      - ase says: Smartphones?
+      - ted says: Oh, no...
+      - bot says: Smartphones are tools, like fishing nets or metalworkers' tools. Except a smartphone is a tool that lets people exchange information from almost anywhere in the world.
+      - ase says: Oh, how horrible! Does that mean we would be receiving threats from the Persians at any time?
+      - bot says: Well, not necessarily-
+      - ase says: Continue with your argument.
+      - bot says: (italic)*She studies the back of the calculator.(end)
+      - bot says: I'm just interested in the product number on the back of this calculator.
+      - bot says: It reminds me of my identification number, "#800."
+      - bot says: For starters, an identification number being so low is incredibly rare.
+      - bot says: Most robots are assigned an ID code instead of a last name that can be alphanumeric and up to nine digits.
+      - bot says: I find it lucky that it's such an aesthetically close number to "#B00".
+      - ted says: What's B00?
+      - bot says: That number belonged to a robot created to serve AlphaBet.
+      - bot says: She ended up secruing the rights and liberation of all automatons.
+      - bot says: But in the process, she was murdered and made a martyr.
+      - bot says: Because of this, there is a vast group of robots who, as a tribute, have modeled their persoalities after the remains of her digital consciousness.
+      - ted says: Cool!
+      - ted says: Hey, where's Asellus?
+      - text: You see Asellus has made his way inside the house and inspecting Teddie's Bamsung Smart Fridge.
+      - text: You hear a scream as it beeps and dumps ice and water at him.
+      #Go to end of round two
 
 confessionZeroThea:
   - text: You decide to confess to Thea.
@@ -348,6 +362,7 @@ confessionTwoThea:
 
   
 roundOneTeddie:
+  - var thea_count: "{thea_count} + 1"
   - text: You decide that this is all kind of overwhelming, and you think you should just talk to Teddie for now.
   - pro says: Ugh, the assignment due date is so close... And I feel like we're really behind on the work...
   - pro says: And now there's about to be two people from across the space-time continuum in your backyard, Teddie...
@@ -441,7 +456,12 @@ roundOneTeddie:
 
       - ted says: It's up to you.
       - ted says: I'm happy we're having a little chat!
+  - choice:
+    - "Confess to Teddie":
+      - scene: confessionZeroTeddy
+    - "Continue to talk to Teddie":
       - scene: roundTwoTeddie
+    - 
 
 roundTwoTeddie:
 
@@ -744,114 +764,114 @@ roundOneAsellus:
 
 roundTwoAsellus:
 
-- ted says: What else do you want to ask Asellus?
+  - ted says: What else do you want to ask Asellus?
 
-- choice:
-  - "Show him Doja Cat.":
-    - pro says: (You show Asellus a Doja Cat music video).
+  - choice:
+    - "Show him Doja Cat.":
+      - pro says: (You show Asellus a Doja Cat music video).
 
-    - ase says: What... A tiny Egyptian in glass.
-    
-    - ted says: No, Asellus, she's not Egyptian.
+      - ase says: What... A tiny Egyptian in glass.
+      
+      - ted says: No, Asellus, she's not Egyptian.
 
-    - ase says: From the shores of Ethiopia, then.
+      - ase says: From the shores of Ethiopia, then.
 
-    - ted says: No, no, she's... Let's see here...
-    - ted says: Oh, she's Jewish and South African.
-    - ted says: Yeah, he's not gonna understand either one of those.
+      - ted says: No, no, she's... Let's see here...
+      - ted says: Oh, she's Jewish and South African.
+      - ted says: Yeah, he's not gonna understand either one of those.
 
-    - ase says: Such flowing movements... Dazzling dances.. Strange and sweet sounds...
-    - ase says: and the light and color... an Amazon fit to sit at the table of Dionysus himself.
+      - ase says: Such flowing movements... Dazzling dances.. Strange and sweet sounds...
+      - ase says: and the light and color... an Amazon fit to sit at the table of Dionysus himself.
 
-    - ted says: Yeah, this thing you're seeing her on is called a "phone".
+      - ted says: Yeah, this thing you're seeing her on is called a "phone".
 
-    - ase says: With it, people from all over the world can see and share things like this with each other...
+      - ase says: With it, people from all over the world can see and share things like this with each other...
 
-    - ase says: From ideas about philosophy to music to opinions on politics and entertainment!
+      - ase says: From ideas about philosophy to music to opinions on politics and entertainment!
 
-    - ase says: An exchange of ideas...
+      - ase says: An exchange of ideas...
 
-    - ase says: (Asellus definitely isn’t listening. He is WAY overstimulated watching Doja.)
+      - ase says: (Asellus definitely isn’t listening. He is WAY overstimulated watching Doja.)
 
-    - ase says: Can I be seen? And is there a way to remove her from the glass?
+      - ase says: Can I be seen? And is there a way to remove her from the glass?
 
-    - ted says: Er...
+      - ted says: Er...
 
-    - ase says: ..She moves with such grace for such a shrunken Amazon.
-    - ase says: Is her soul bound in glass forever?
+      - ase says: ..She moves with such grace for such a shrunken Amazon.
+      - ase says: Is her soul bound in glass forever?
 
-    - ted says: No, it's just a video. It's a recording of color and sound.
+      - ted says: No, it's just a video. It's a recording of color and sound.
 
-    - ase says: "..."    
-    - ase says: (Asellus’ gears are turning at full speed in his brain.)
+      - ase says: "..."    
+      - ase says: (Asellus’ gears are turning at full speed in his brain.)
 
-    - ase says: All the beauties of Egypt and beyond, delivered right before my very eyes...!
+      - ase says: All the beauties of Egypt and beyond, delivered right before my very eyes...!
 
-    - ase says: Hm?
+      - ase says: Hm?
 
-    - ase says: What is that yellow monolith she dances besides?
+      - ase says: What is that yellow monolith she dances besides?
 
-    - ted says: Oh, that's... The video is a tie-in with Nilla Wafers.
+      - ted says: Oh, that's... The video is a tie-in with Nilla Wafers.
 
-    - ase says: What is Nilla?
+      - ase says: What is Nilla?
 
-    - ted says: It's kind of like, a sweet bread.
+      - ted says: It's kind of like, a sweet bread.
 
-    - ase says: What does an Egyptian Queen have to do meddling with some lowly bread merchant?
+      - ase says: What does an Egyptian Queen have to do meddling with some lowly bread merchant?
 
-    - ted says: Not even going to (italic)try(end) to explain that one.
+      - ted says: Not even going to (italic)try(end) to explain that one.
 
-    - ase says: Regardlesss... This Doja Cat...
-    - ase says: Δωα κατ…
-    - ase says: I will bring word of her beauty back to Athens.
-    
+      - ase says: Regardlesss... This Doja Cat...
+      - ase says: Δωα κατ…
+      - ase says: I will bring word of her beauty back to Athens.
+      
 
-  - "Have they ever made a statue of you?":
-    - pro says: Have they ever made a statue in your image, Asellus?
-    - ase says: In my image, no.
-    - ase says: Though I (italic)have(end) modeled nude for a sculptor before!
-    - ted says: Cool!
-    - ase says: It was arduous work to remain in the same pose for so long.
-    - ase says: And I had to spend weeks speaking with the great poets and fellow philosophers of my time...
-    - ase says: Questioning the very nature of the gods themselves, to fully get into character...
-    - ase says: As a model of the divine!
-    - ase says: But, after all toil, I was immortalized, though uncredited...
-    - ase says: ...As a bronze Apollo, in the masterful hand of Polykleitos!
+    - "Have they ever made a statue of you?":
+      - pro says: Have they ever made a statue in your image, Asellus?
+      - ase says: In my image, no.
+      - ase says: Though I (italic)have(end) modeled nude for a sculptor before!
+      - ted says: Cool!
+      - ase says: It was arduous work to remain in the same pose for so long.
+      - ase says: And I had to spend weeks speaking with the great poets and fellow philosophers of my time...
+      - ase says: Questioning the very nature of the gods themselves, to fully get into character...
+      - ase says: As a model of the divine!
+      - ase says: But, after all toil, I was immortalized, though uncredited...
+      - ase says: ...As a bronze Apollo, in the masterful hand of Polykleitos!
 
-    - ted says: Awesome!!
+      - ted says: Awesome!!
 
-    - bot says: How utterly interesting!
+      - bot says: How utterly interesting!
 
-    - ase says: ...Mostly.
+      - ase says: ...Mostly.
 
-    - ted says: Mostly?
+      - ted says: Mostly?
 
-    - ase says: Well, Polykleitos took some, er, artistic liberties when making the sculpture.
+      - ase says: Well, Polykleitos took some, er, artistic liberties when making the sculpture.
 
-    - ted says: What do you mean?
+      - ted says: What do you mean?
 
-    - ase says: I was- hm- told that I took "too big of a seat" for the statue to be modeled completely after me.
+      - ase says: I was- hm- told that I took "too big of a seat" for the statue to be modeled completely after me.
 
-    - ted says: So, like.
-    - ted says: Your butt was too big??
+      - ted says: So, like.
+      - ted says: Your butt was too big??
 
-    - bot says: There would be no room for derriere like that with the toned, muscular,
-    - bot says: masculinity-focused beauty standards of ancient Greece!
+      - bot says: There would be no room for derriere like that with the toned, muscular,
+      - bot says: masculinity-focused beauty standards of ancient Greece!
 
-    - ted says: Also, Asellus, are you not a cool enough philosopher to have your own statue?
+      - ted says: Also, Asellus, are you not a cool enough philosopher to have your own statue?
 
-    - pro says: (Gosh, Teddie, way to go for the jugular...)
+      - pro says: (Gosh, Teddie, way to go for the jugular...)
 
-    - ase says: No, no... All everyone wants to do is make statues of Socrates, but he's ugly as an ass.
+      - ase says: No, no... All everyone wants to do is make statues of Socrates, but he's ugly as an ass.
 
-    - bot says: And, as I will add, many statues of philosophers and noble people were typically unrealistically idealized,
-    - bot says: As well as often crafted after a person's death.
+      - bot says: And, as I will add, many statues of philosophers and noble people were typically unrealistically idealized,
+      - bot says: As well as often crafted after a person's death.
 
-    - ted says: With normal-sized butts.
-    
-    - ase says: Quiet!
+      - ted says: With normal-sized butts.
+      
+      - ase says: Quiet!
 
-    - ted says: Teehee!
+      - ted says: Teehee!
 
 
 confessionZeroAsellus:

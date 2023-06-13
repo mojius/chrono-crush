@@ -33,7 +33,7 @@ transitions:
   skippable: false
 
 # Fade transition time, in miliseconds
-fadetime : 750
+fadetime : 300
 # Time in each action that waits (e.g. text and say) when skipping
 skiptime: 50
 # Time in each action that waits (e.g. text and say) when auto playing
