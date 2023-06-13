@@ -135,6 +135,15 @@ startTimeMachine:
       - scene: roundOneAsellus
     - "Talk to Thea, the futuristic robot lady.":
       - scene: roundOneThea
+  
+nextSelection: 
+  # Come back to this scene once you're done with one dialogue scene with Thea or Asellus
+  - pro says: Okay, who to talk to next...
+  - choice:
+    # If talked to Thea previously, go to round two with her. Else, begin conversation with Thea
+    # ^ Same applies with Asellus
+    # Once you have talked to both Thea and Asellus twice, a NEW option will appear with Teddie for Teddie's good ending
+    # ^ or we can have Teddie appear already, and just have her as an interaction for story purposes. No confession or anything.
 
 
 roundOneThea:
