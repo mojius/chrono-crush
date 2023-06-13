@@ -1201,7 +1201,7 @@ postRoundTeddy:
   - text says: "What did you want to talk about?"
   - choice:
     - "Confess to Teddy":
-      - scene: confessionThreeThea
+      - scene: confessionThreeTeddy
     - "Talk to Theddy":
       # Fill in dialogue
       - "Shouldn't you be talking to our wonderful guests?"
