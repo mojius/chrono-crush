@@ -30,4 +30,5 @@ const RenJSConfig =  {
 
 const RenJSGame = new RenJS.game(RenJSConfig);
 RenJSGame.addPlugin("text_log", TextLog);
+RenJSGame.addPlugin("text_input", TextInput);
 RenJSGame.launch();

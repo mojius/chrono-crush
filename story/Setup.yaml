@@ -6,7 +6,7 @@ backgrounds:
 
 characters:
   pro:
-    displayName: Protagonist
+    displayName: You
     speechColour: "#ca90cf"
     looks:
       normal: assets/characters/Char3NormalSchool.png
@@ -18,11 +18,15 @@ characters:
   ase:
       displayName: Asellus
       speechColour: "#000000"
+      color: "0000FF"
   bot:
     displayName: Thea
     speechColour: "#000000"
   unk:
     displayName: "???"
+    speechColour: "#000000"
+  text:
+    displayName: ""
     speechColour: "#000000"
 
 
@@ -43,3 +47,4 @@ extra:
     sakura: assets/ambient/sakura-petals.png 17 26
     snowflakes: assets/ambient/snowflakes.png 17 17
     snowflakes_large: assets/ambient/snowflakes_large.png 64 64
+    confirmBtn: assets/gui/confirm.png 163 82

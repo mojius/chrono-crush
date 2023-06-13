@@ -45,7 +45,7 @@
 
 
 start:
-  - var name: Kris
+  # - var name: Kris
   # ------------------------------
   # Our variables for the story
   # ------------------------------
@@ -55,7 +55,9 @@ start:
   - var time_machine: false
   # ------------------------------
   - show room: WITH FADE CONTINUE
-  - pro says: My name is {name}. I'm a junior in college.
+  - text says: What is your name?
+  - call text_input: var player
+  - pro says: My name is {player}. I'm a junior in college.
   - pro says: I'm interested in games and computers, but my best friend and I have a whopper of an assignment coming up.
   - pro says: It's for a required class we both have to take because we transferred into the school.
   - pro says: The theme is whether we should look to the innovations of the future for the success of humanity, or seek guidance from the traditions of the past.
@@ -73,7 +75,7 @@ start:
   - pro says: It wasn't so easy. Their parents didn't take it so well.
   - pro says: But I supported them all the way. And I'm incredibly lucky to have such a dear friend, and for so long!
   - pro says: ...Huh?
-  - ted says: Hey, {name}!
+  - ted says: Hey, {player}!
   - ted says: Are we gonna start these time machines, or what?
   - pro says: ...Oh, oh yeah, um...
   - choice:
@@ -127,7 +129,7 @@ startTimeMachine:
   - bot says: Let us strive for a future where consciousness is celebrated, irrespective of its origins, and where the pursuit of understanding surpasses the limitations of temporal prejudice.
   - ted says: Alright, jeez! We've got a couple of characters here.
   - ted says: So, who to talk to first... 
-  - ted says: I guess I'll leave it up to you, {name}!
+  - ted says: I guess I'll leave it up to you, {player}!
   - pro says: "(italic)(Talk about a rock and a hard place...)(end)"
   # Go to Round 1 scene in Phaser.
   - choice: 
@@ -255,7 +257,7 @@ roundOneThea:
     - ted says: Yeah, and we use them to write essays for us, too!
     - ase says: A statue think for a man? Pah! How horrible.
     - ase says: Though... Curious. Tell us more, statue.
-    - ted says: Want to say anything else to Thea, {name}?
+    - ted says: Want to say anything else to Thea, {player}?
     - choice:
       - "You're really beautiful!":
         - pro says: You're really beautiful, Thea!
@@ -321,7 +323,7 @@ roundTwoThea:
   # Updating thea_count here
   - var thea_count: 2
   # ------------------------------
-  - ted says: "What else do you want to ask Thea, {name}?"
+  - ted says: "What else do you want to ask Thea, {player}?"
   - choice: 
       - "Confess your love to Thea.":
         - text: You decide to confess to Thea.
@@ -482,7 +484,7 @@ roundOneTeddie:
   - pro says: Ugh, the assignment due date is so close... And I feel like we're really behind on the work...
   - pro says: And now there's about to be two people from across the space-time continuum in your backyard, Teddie...
   - pro says: Which might not be such a good idea!
-  - ted says: It'll be alright, {name}. 
+  - ted says: It'll be alright, {player}. 
   - ted says: We'll get the info we want out of them for the project, and then send them both home.
   - text: You glance at Teddie for a moment, and a lot passes through your mind in that short time.
   - text: You and Teddie both transferred to the University of California San Jose, and are housemates.
@@ -503,7 +505,7 @@ roundOneTeddie:
       - ted says: Oh, I've been using a new soap, but it's really strong, haha.
       - ted says: It's actually the one you got me for my birthday a month ago... The Deadpool Super Sex Soap bar.
       - pro says: (That's right... It was kind of a meme gift, but it was a good fakeout before showing them the RTX 3060 you got them.)
-      - ted says: Thanks for noticing, {name}!
+      - ted says: Thanks for noticing, {player}!
       - text: The two of you laugh about this because it's kind of a weird thing to nice. Sigh...
       - ted says: How the heck are we going to do this if the time machine doesn't work? Maybe just google a bunch of words on the past and future from various philosophers throughout history? 
       - ted says: Get ChatGPT to come up with something?
@@ -543,7 +545,7 @@ roundOneTeddie:
 
       - ted says: (They smile.)
       - ted says: Thank you for your support.
-      - ted says: How are YOU doing, {name}?
+      - ted says: How are YOU doing, {player}?
 
       - pro says: Just alright. Being a Game Development major is pretty cool.
       - pro says: Have you seen your latest game project I've been working on?
@@ -646,7 +648,7 @@ confessionZeroTeddy:
   - pro says: I want the best for you.
 
   - ted says: Oh-okay!
-  - ted says: Thank you, {name}. I'm really glad we're in this together.
+  - ted says: Thank you, {player}. I'm really glad we're in this together.
 
   - pro says: (It's just.. A little too soon. It doesn't feel right.)
   - pro says: (For all the time you've known them, since you were kids, you really have no clue how to go about this.)
@@ -686,7 +688,7 @@ confessionThreeTeddy:
   - pro says: (Despite this, you notice they are both staring at you.)
   - pro says: (Teddie is, too.)
   
-  - ted says: "{name}...?"
+  - ted says: "{player}...?"
 
   - pro says: (You think to ask them to stop, but then you shrug.) 
   - pro says: (Who cares if they're here to witness you make an ass out of yourself, or confess all awkward and robotically?)
@@ -716,7 +718,7 @@ confessionThreeTeddy:
 
   - ted says: "..."
   - ted says: I didn't need those guys to say anything.
-  - ted says: I love you, {name}.
+  - ted says: I love you, {player}.
 
   - text: (Teddie’s lips curl into a wry, embarrassed grin as they embrace you, to the celebration of the two historical figures in front of you!!)
 
@@ -807,7 +809,7 @@ roundOneAsellus:
   - ted says: Oh, bullcrap!
   - ted says: I'm sure you have a bunch of stuff to teach the contemporary world, Asellus!
   - ted says: ...If at least some thoughts to help with our group project.
-  - ted says: What do you want to ask him, {name}?
+  - ted says: What do you want to ask him, {player}?
 
   - choice:
     - "Why are you so buff?":
