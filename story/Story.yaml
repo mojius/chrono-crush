@@ -45,7 +45,6 @@
 
 
 start:
-  # - var name: Kris
   # ------------------------------
   # Our variables for the story
   # ------------------------------
@@ -57,6 +56,10 @@ start:
   - show room: WITH FADE CONTINUE
   - text says: What is your name?
   - call text_input: var player
+  
+  # For debugging. REMOVE WHEN DONE!!
+  - scene: roundOneThea
+
   - pro says: My name is {player}. I'm a junior in college.
   - pro says: I'm interested in games and computers, but my best friend and I have a whopper of an assignment coming up.
   - pro says: It's for a required class we both have to take because we transferred into the school.
@@ -68,14 +71,15 @@ start:
   - pro says: Not just one time machine, but TWO!!!
   - pro says: I asked them, isn't that a little much???
   - pro says: But Teddie doesn't care. They're just headstrong like that.
-  # show teddie
+  - show ted: happy AT CENTER WITH FADE
   - pro says: Teddie Lê...
   - pro says: My best friend since childhood.
   - pro says: They came out as non-binary to their parents just last year.
   - pro says: It wasn't so easy. Their parents didn't take it so well.
   - pro says: But I supported them all the way. And I'm incredibly lucky to have such a dear friend, and for so long!
+  - hide ted: WITH FADE
   - pro says: ...Huh?
-  - show ted: grin WITH FADE AT CENTER
+  - show ted: happy WITH FADE AT CENTER
   - ted says: Hey, {player}!
   - ted says: Are we gonna start these time machines, or what?
   - pro says: ...Oh, oh yeah, um...
@@ -90,20 +94,24 @@ start:
     - "On second thought...":
       - pro says: Honestly, Teddie...
       - pro says: Isn't this all a little much?
-      - ted says: What do you mean?
+      - ted says surprised: What do you mean?
       - pro says: Well, I mean, maybe with everything going on in our lives...
       - pro says: maybe we should think for a second before we open up two giant holes in spacetime!
-      - ted says: But you were so excited...
+      - ted says sad: But you were so excited...
       - pro says: I still am, trust me!
       - pro says: But let's just talk for a bit about this assignment first. No need to rush into anything!
-      - ted says: Fine... Let's talk!
+      - ted says glad: Fine... Let's talk!
+      - hide ALL: WITH FADE
       - scene: roundOneTeddie
     # Go to backyard scene 0, no teleporter. OR teddie.
   
 startTimeMachine:
   - var time_machine: true
+  - show room: WITH FADE
   - text: You watch as Teddie goes over to the two machines, tinkering with them and turning them on.
   - text: Before long, two giant and imposing portals open up! From the left portal emerges a stout figure from the ether...
+  - wait: 1000
+  - show: ase WITH FADE
   - ase says: Αυτός είναι ο Άδης
   - pro says: D-did we summon someone from Ancient Greece?
   - ted says: W-wait! I can use an auto-translator on him?
@@ -132,6 +140,7 @@ startTimeMachine:
   - ted says: So, who to talk to first... 
   - ted says: I guess I'll leave it up to you, {player}!
   - pro says: "(italic)(Talk about a rock and a hard place...)(end)"
+  - hide ALL: WITH FADE
   # Go to Round 1 scene in Phaser.
   - choice: 
     - "Talk to Asellus, the ancient Greek philosopher.":
@@ -141,6 +150,7 @@ startTimeMachine:
 
 
 nextSelection: 
+  - show room: WITH FADE
   # Come back to this scene once you're done with one dialogue scene with Thea or Asellus
 
   # If talked to Thea previously, go to round two with her. Else, begin conversation with Thea
@@ -216,6 +226,8 @@ nextSelection:
 
 
 roundOneThea:
+    - show room: WITH FADE
+    - show bot: WITH FADE AT CENTER
     # ------------------------------
     # Updating Thea talk count here.
     - var thea_count: 1
@@ -223,23 +235,26 @@ roundOneThea:
     - choice: 
       - "Confess your love to Thea.":
         - text: You decide to confess to Thea.
+        - hide ALL: WITH FADE
         - scene: confessionZeroThea
       - "Talk to Thea.":
         - text: You decide to talk to Thea.
     - pro says: Thea, I think I'm going to talk to you first.
     - pro says: Make an argument for why we should look to the future for the success of humanity.
     - ted says: We're not world leaders or anything, this is for a school project.
-    - bot says: As you wish! And you'll be happy to know education has come a long way since these primitive times you live in.
+    - bot says happy: As you wish! And you'll be happy to know education has come a long way since these primitive times you live in.
     - bot says: Now...
-    - bot says: In the boundless expanse of time, the past becomes a fixed point, while the future is a canvas brimming with infinite possibilities.
+    - bot says normal: In the boundless expanse of time, the past becomes a fixed point, while the future is a canvas brimming with infinite possibilities.
     - bot says: focusing our attention on the future, we unleash our potential to shape a world that transcends the limitations of the past.
     - bot says: The past may be a reference, but it should not be an anchor that hinders our growth.
-    - bot says: The future holds the promise of technological advancements in envrionmental sustainability...
+    - bot says glad: The future holds the promise of technological advancements in envrionmental sustainability...
+    - hide room: WITH FADE
     - text: As you listen to Thea speak, you begin to zone out.
     - text: You're enraptured by her gentle face, her cool robot body, and her cute cat ears...
     - text: Her infinite technological skill and potential as the next step for humanity!
     - text: You fantasize wistfully about how she could take care of you and cater to your every whim while still retaining her own unique personality.
     - text: You're pretty sure that's how it works, right? Whatever.
+    - show room: WITH FADE
     - text: Before long though, a new voice interrupts..
     - ase says: You mentioned advancements in consciousness too in this far-flung time you speak of.
     - ase says: And yet, how can you know you have consciousness?
@@ -685,7 +700,7 @@ confessionOneTwoTeddy:
 
   - pro says: (Well, shit. Now not just the assignment, but your deepest friendship is in jeopardy.)
 
-  - text: Bad ending!
+  - text: (Bad ending.)
 
   - endgame:
 
