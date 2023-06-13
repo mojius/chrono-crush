@@ -48,6 +48,8 @@ punctuationMarks: [".",",","!","?",":","-"]
 # the total amount of wait will be this value multiplied the text speed
 punctuationWait: 5
 
+charPerSfx: -1
+
 # Keeps story log for text_log
 keepStoryLog: true
 

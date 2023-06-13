@@ -28,8 +28,9 @@ config:
       type: messageBox
       asset: asset19
       x: 40
+      # 449
       'y': 449
-      sfx: none
+      sfx: 'ping_sfx'
       text:
         x: 24
         'y': 24
@@ -44,6 +45,7 @@ config:
         x: 570
         'y': 91
         asset: asset21
+        sfx: ping_sfx
     - id: default
       type: nameBox
       asset: asset20
@@ -90,6 +92,7 @@ config:
       y: 20
       asset: logBtn
       binding: showTextLog
+      sfx: ping_sfx
   menus:
     main:
       - type: image
