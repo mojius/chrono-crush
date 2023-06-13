@@ -242,6 +242,7 @@ roundOneThea:
         - text: You hear Asellus whisper to himself...
         - ase says: (Could she be a Platonic ideal of woman..?)
         - ted says: (italic)*facepalm*(end)
+        - scene: nextSelection
       # Go to round 2 with robot spoken to one time.
       - "What's the future like?":
         - bot says: Well, the far future is exceptional for the success and well-being of peoplekind.
@@ -273,6 +274,7 @@ roundOneThea:
         - ted says: And I'm not a girl!!
         - ase says: Good man, then.
         - ted says: (Forget it. No use trying to explain to him gender at a time like this...)
+        - scene: nextSelection
 #       #Go to round 2 with robot having spoken to one time.
       
 
@@ -302,6 +304,7 @@ roundTwoThea:
       - ase says: Talking statues, animal romance.. What a strange vision this is.
       - ase says: If all this were true, my deep knowledge of the world would be deeply shaken.
       - ted says: (italic)(Good thing it's not, huh?)(end)
+      - scene: nextSelection
 
     - "(Show her a calculator.)":
       - bot says: I know very well what this is.
@@ -332,6 +335,7 @@ roundTwoThea:
       - text: You see Asellus has made his way inside the house and inspecting Teddie's Bamsung Smart Fridge.
       - text: You hear a scream as it beeps and dumps ice and water at him.
       #Go to end of round two
+      - scene: nextSelection
 
 
 confessionZeroThea:
@@ -521,7 +525,6 @@ roundOneTeddie:
       - scene: confessionZeroTeddy
     - "Continue to talk to Teddie":
       - scene: roundTwoTeddie
-    - 
 
 
 roundTwoTeddie:
@@ -780,6 +783,8 @@ roundOneAsellus:
       - ase says: Is it..?
       - ase says: Good tidings.  
 
+      - scene: nextSelection
+
   - "Make an argument for the past!":
     - pro says: Asellus, explain why we might look to the past for guideance.
     - ase says: Well.
@@ -825,6 +830,8 @@ roundOneAsellus:
 
     - bot says: That was very well-spoken of you, Asellus, I enjoyed your oration.
     - ase says: Thank you, statue!
+
+    - scene: nextSelection
 
 
 roundTwoAsellus:
@@ -890,6 +897,8 @@ roundTwoAsellus:
       - ase says: Regardlesss... This Doja Cat...
       - ase says: Δωα κατ…
       - ase says: I will bring word of her beauty back to Athens.
+
+      - scene: nextSelection
       
 
     - "Have they ever made a statue of you?":
@@ -938,6 +947,8 @@ roundTwoAsellus:
       - ase says: Quiet!
 
       - ted says: Teehee!
+
+      - scene: nextSelection
 
 
 confessionZeroAsellus:
