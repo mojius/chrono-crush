@@ -15,6 +15,15 @@ characters:
   ted:
       displayName: Teddie
       speechColour: "#000000"
+      looks:
+        normal: assets/characters/teddie_regular.png
+        smile: assets/characters/teddie_smile.png
+        grin: assets/characters/teddie_grin.png
+        angry: assets/characters/teddie_angry.png
+        sad: assets/characters/teddie_sad.png
+        surprised: assets/characters/teddie_surprise.png
+        confused: assets/characters/teddie_confused.png
+        blush: assets/characters/teddie_blush.png
   ase:
       displayName: Asellus
       speechColour: "#000000"
@@ -22,6 +31,15 @@ characters:
   bot:
     displayName: Thea
     speechColour: "#000000"
+    looks:
+        normal: assets/characters/thea_regular.png
+        smile: assets/characters/thea_smile.png
+        happy: assets/characters/thea_happy.png
+        angry: assets/characters/thea_angry.png
+        sad: assets/characters/thea_sad.png
+        surprised: assets/characters/thea_surprise.png
+        confused: assets/characters/thea_confused.png
+        blush: assets/characters/thea_blush.png
   unk:
     displayName: "???"
     speechColour: "#000000"
