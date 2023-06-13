@@ -140,7 +140,8 @@ startTimeMachine:
 roundOneThea:
     # ------------------------------
     # Updating Thea talk count here.
-    - var thea_count: "{thea_count} + 1"
+    - var thea_count: 1
+    # ------------------------------
     - pro says: Thea, I think I'm going to talk to you first.
     - pro says: Make an argument for why we should look to the future for the success of humanity.
     - ted says: We're not world leaders or anything, this is for a school project.
@@ -199,7 +200,6 @@ roundOneThea:
         - ase says: (Could she be a Platonic ideal of woman..?)
         - ted says: (italic)*facepalm*(end)
       # Go to round 2 with robot spoken to one time.
-        - scene:
       - "What's the future like?":
         - bot says: Well, the far future is exceptional for the success and well-being of peoplekind.
         - bot says: We no longer use the legacy phrase "humankind."
@@ -234,6 +234,10 @@ roundOneThea:
       
 
 roundTwoThea:
+  # ------------------------------
+  # Updating thea_count here
+  - var thea_count: 2
+  # ------------------------------
   - ted says: "What else do you want to ask Thea, {name}?"
   - choice:
     - "Have you ever been in love?":
@@ -286,6 +290,7 @@ roundTwoThea:
       - text: You hear a scream as it beeps and dumps ice and water at him.
       #Go to end of round two
 
+
 confessionZeroThea:
   - text: You decide to confess to Thea.
   - pro says: Thea, I have a crush on you and I want to go out with you!
@@ -302,6 +307,7 @@ confessionZeroThea:
   - ase says: Even Dionysus and Aphrodite will wait... 
   - ase says: ...for the grapes of affection to age before love's wine can be enjoyed.
   # Bad ending!
+
 
 confessionOneThea:
   - pro says: Thea, I have to admit...
@@ -373,7 +379,7 @@ confessionTwoThea:
 
   
 roundOneTeddie:
-  - var thea_count: "{thea_count} + 1"
+  - var thea_count: 1
   - text: You decide that this is all kind of overwhelming, and you think you should just talk to Teddie for now.
   - pro says: Ugh, the assignment due date is so close... And I feel like we're really behind on the work...
   - pro says: And now there's about to be two people from across the space-time continuum in your backyard, Teddie...
@@ -474,8 +480,12 @@ roundOneTeddie:
       - scene: roundTwoTeddie
     - 
 
-roundTwoTeddie:
 
+roundTwoTeddie:
+  # ------------------------------
+  # Updating Teddie count here
+  - var teddie_count: 2
+  # ------------------------------
   - "Anything fun going on in the rest of the day?":
     
     - ted says: Besides the two wormhole-enabling time machines we might be about to turn on to trans-dimensionally relocate two time-struck individuals?
@@ -500,6 +510,7 @@ roundTwoTeddie:
     - pro says: (You think it's nice to have friends who like the same things as you.)
     - pro says: (American loneliness epidemic? Couldn't be you, you think with a selfish smirk.)
 
+
 confessionZeroTeddy:
   - pro says: (You try to confess to Teddie...)
   - pro says: (And...)
@@ -514,6 +525,7 @@ confessionZeroTeddy:
   - pro says: (For all the time you've known them, since you were kids, you really have no clue how to go about this.)
   - pro says: (It's not something you'd rush into.)
   # Bad ending!
+
 
 confessionOneTwoTeddy:
   - pro says: Teddie...
@@ -594,6 +606,7 @@ confessionThreeTeddy:
   - pro says: It won’t always be easy. But it’s the only thing we have.
   - pro says: And as you relax into that moment, as infinite as life itself… You think that it’ll be enough.
   - pro says: The end.
+
 
 roundOneAsellus:
 
@@ -770,9 +783,6 @@ roundOneAsellus:
     - ase says: Thank you, statue!
 
 
-
-
-
 roundTwoAsellus:
 
   - ted says: What else do you want to ask Asellus?
@@ -905,6 +915,7 @@ confessionZeroAsellus:
   - text: (He endlessly asks questions until you drift off, almost to sleep.)
   - text: (That was a sily idea, anyway…)
 
+
 confessionOneAsellus:
   - pro says: Asellus...
   - pro says: I think you're dashing!
@@ -926,6 +937,7 @@ confessionOneAsellus:
   - bot says: Asellus' words and deeds left an impact on my emotions in a way I have not yet been able to quantify.
 
   - text: The end. (Bad ending.)
+
 
 confessionTwoAsellus:
   - pro says: Asellus...
@@ -977,10 +989,3 @@ confessionTwoAsellus:
   - ted says: (Are you serious right now...?)
   - text: And so, our two out-of-time individuals run off together to save the world.
   - text: But where does that leave you and Teddie...?
-  
-
-
-
-
-
-
