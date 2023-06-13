@@ -629,7 +629,7 @@ roundTwoTeddie:
   - var teddie_count: 2
   # ------------------------------
 
-  choice:
+  - choice:
     - "Confess to Teddy.":
       - scene: confessionOneTwoTeddy
     - "Start time machine.":
