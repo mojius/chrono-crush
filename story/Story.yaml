@@ -58,30 +58,30 @@ start:
   - call text_input: var player
   
   # For debugging. REMOVE WHEN DONE!!
-  ## - scene: roundOneThea
+  - scene: roundOneThea
 
-  # - pro says: My name is {player}. I'm a junior in college.
-  # - pro says: I'm interested in games and computers, but my best friend and I have a whopper of an assignment coming up.
-  # - pro says: It's for a required class we both have to take because we transferred into the school.
-  # - pro says: The theme is whether we should look to the innovations of the future for the success of humanity, or seek guidance from the traditions of the past.
-  # - pro says: But me and my best friend Teddie have ZERO ideas on what to write.
-  # - pro says: We're not English majors here, we're STEM people!
-  # - pro says: So, as part of a harebrained scheme, Teddie has made some...
-  # - pro says: Time machines.
-  # - pro says: Not just one time machine, but TWO!!!
-  # - pro says: I asked them, isn't that a little much???
-  # - pro says: But Teddie doesn't care. They're just headstrong like that.
-  # - show ted: happy AT CENTER WITH FADE
-  # - pro says: Teddie Lê...
-  # - pro says: My best friend since childhood.
-  # - pro says: They came out as non-binary to their parents just last year.
-  # - pro says: It wasn't so easy. Their parents didn't take it so well.
-  # - pro says: But I supported them all the way. And I'm incredibly lucky to have such a dear friend, and for so long!
-  # - hide ted: WITH FADE
-  # - pro says: ...Huh?
-  # - show ted: happy WITH FADE AT CENTER
-  # - ted says: Hey, {player}!
-  # - ted says: Are we gonna start these time machines, or what?
+  - pro says: My name is {player}. I'm a junior in college.
+  - pro says: I'm interested in games and computers, but my best friend and I have a whopper of an assignment coming up.
+  - pro says: It's for a required class we both have to take because we transferred into the school.
+  - pro says: The theme is whether we should look to the innovations of the future for the success of humanity, or seek guidance from the traditions of the past.
+  - pro says: But me and my best friend Teddie have ZERO ideas on what to write.
+  - pro says: We're not English majors here, we're STEM people!
+  - pro says: So, as part of a harebrained scheme, Teddie has made some...
+  - pro says: Time machines.
+  - pro says: Not just one time machine, but TWO!!!
+  - pro says: I asked them, isn't that a little much???
+  - pro says: But Teddie doesn't care. They're just headstrong like that.
+  - show ted: happy AT CENTER WITH FADE
+  - pro says: Teddie Lê...
+  - pro says: My best friend since childhood.
+  - pro says: They came out as non-binary to their parents just last year.
+  - pro says: It wasn't so easy. Their parents didn't take it so well.
+  - pro says: But I supported them all the way. And I'm incredibly lucky to have such a dear friend, and for so long!
+  - hide ted: WITH FADE
+  - pro says: ...Huh?
+  - show ted: happy WITH FADE AT CENTER
+  - ted says: Hey, {player}!
+  - ted says: Are we gonna start these time machines, or what?
   - pro says: ...Oh, oh yeah, um...
   - choice:
     # ------------------------------
