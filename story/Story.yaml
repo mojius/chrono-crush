@@ -619,6 +619,7 @@ confessionThreeTeddy:
 
 roundOneAsellus:
 
+  - var asellus_count: 1
   - pro says: (You decide to talk to Asellus.)
 
   - ase says: So, where am I? What are these strange constructions?
@@ -794,6 +795,7 @@ roundOneAsellus:
 
 roundTwoAsellus:
 
+  - var asellus_count: 2
   - ted says: What else do you want to ask Asellus?
 
   - choice:
