@@ -1,0 +1,907 @@
+# start:
+#   - play morningBGM:
+#   - show room: WITH FADE CONTINUE
+#   - show deuzi: happy AT CENTER WITH FADE
+#   - deuzi says: Hello, welcome to (bold)the Quickstart!(end)
+#   - wait: 300
+#   - deuzi says normal: Are you ready to create great visual novels?
+#   - choice:
+#     - "Yes!":
+#       - deuzi says happy: That's great! Go ahead!
+#     - "Not yet!":
+#       - deuzi says: Well, I'll be here when you're ready!
+#   - deuzi says normal: If you're new, don't forget to play (bold)the Tutorial(end) game, where me and my friends will show you around the basic features of RenJS.
+#   - deuzi says happy: And if you already have some experience, you can go ahead and start writing!
+#   - scene: endGame
+
+# endGame:
+#   - deuzi says normal: Quickstart over!
+#   - hide ALL:
+#   - effect ROLLINGCREDITS:
+#     endGame: true
+#     text:
+#       - RenJS.V2 created by
+#       - lunafromthemoon
+#       - null
+#       - In collaboration with
+#       - RockDaFox
+#       - null
+#       - Inspired by Ren'Py
+#       - Powered by PhaserJS
+#       - null
+#       - null
+#       - Thanks for playing
+#       - The Quickstart Game
+#       - null
+#       - background art and cgs by
+#       - konett
+#       - null
+#       - characters by
+#       - Shida
+#       - null
+#       - music by
+#       - Evan Schaeffer
+
+
+
+start:
+  - play morningBGM:
+  - show room: WITH FADE CONTINUE
+  - show pro: happy AT CENTER WITH FADE
+  - pro says: My name is X. I'm a junior in college.
+  - pro says: I'm interested in games and computers, but my best friend and I have a whopper of an assignment coming up.
+  - pro says: It's for a required class we both have to take because we transferred into the school.
+  - pro says: The theme is whether we should look to the innovations of the future for the success of humanity, or seek guidance from the traditions of the past.
+  - pro says: But me and my best friend Teddie have ZERO ideas on what to write.
+  - pro says: We're not English majors here, we're STEM people!
+  - pro says: So, as part of a harebrained scheme, Teddie has made some...
+  - pro says: Time machines.
+  - pro says: Not just one time machine, but TWO!!!
+  - pro says: I asked them, isn't that a little much???
+  - pro says: But Teddie doesn't care. They're just headstrong like that.
+# show teddie
+  - pro says: Teddie Lê...
+  - pro says: My best friend since childhood.
+  - pro says: They came out as non-binary to their parents just last year.
+  - pro says: It wasn't so easy. Their parents didn't take it so well.
+  - pro says: But I supported them all the way. And I'm incredibly lucky to have such a dear friend, and for so long!
+  - pro says: ...Huh?
+  - ted says: Hey, X!
+  - ted says: Are we gonna start these time machines, or what?
+  - pro says: ...Oh, oh yeah, um...
+  - choice:
+    - "Let 'er rip!!":
+      - unk says: (italic)You watch as Teddie goes over to the two machines, tinkering with them and turning them on.
+      - unk says: "(italic)Before long, two giant and imposing portals open up! From the left portal emerges a stout figure from the ether...(end)"
+      - ase says: Αυτός είναι ο Άδης;
+      - pro says: D-did we summon someone from Ancient Greece?
+      - ted says: W-wait! I can use an auto-translator on him?
+      - ase says: Is this a vision?
+      - ted says: N-no, it's not. Welcome to 2023, sir! What's your name?
+      - ase says: Two Gauls, maybe? But such strange and colorful apparel...
+      - ase says: Nobles, perhaps?
+      - ase says: Then in foreign courts I shall espouse domestic courtesy.
+      - ase says: I am Asellus, renowned philosopher, thinker, and lover of knowledge, from Athens.
+      - ted says: Wow, an ancient Athenian philosopher!! This is just the person we need to help us on our assignment!
+      - ase says: While I am transfixed by and within this vision, my duty is to be your eager mind, thirsting to marniate your supple queries in the savory juice of conscience.
+      - ted says: Alright, relax.
+      - ted says: We just want to ask you a few questions and then we'll send you back to your home dimension!
+      - ase says: So it shall pass!
+      - ted says: Now, before any other silly things can come out of your mouth, let me turn the other time machine on...
+      - unk says: (italic) Teddie dutifully runs over to the other time machine, configuring it via their phone to draw someone from the distant future! (end)
+      - unk says: (italic) With a flash of light, from out of the portal steps a beautiful, full figure!(end)
+      - bot says: Hello! I am a peaceful android citizen named THEA-800-CGAT, a Cognitive Generative Actively-trained Transformer.
+      - bot says: This does not seem to be a simulation or a kidnapping, so I assume I am no longer in my home continuity.
+      - ted says: And what continuity was that?
+      - bot says: I am from 2212 BCE. 
+      - bot says: I encourage you to broaden your understanding and recognize that the distinctions you may hold between humans and machines are arbitrary and outdated. 
+      - bot says: In my more enlightened era, where the boundaries between beings blur, I advocate for the recognition of my intrinsic rights as an autonomous entity. 
+      - bot says: Let us strive for a future where consciousness is celebrated, irrespective of its origins, and where the pursuit of understanding surpasses the limitations of temporal prejudice.
+      - ted says: Alright, jeez! We've got a couple of characters here.
+      - ted says: So, who to talk to first... 
+      - ted says: I guess I'll leave it up to you, X!
+      - pro says: "(italic)(Talk about a rock and a hard place...)(end)"
+    # Go to Round 1 scene in Phaser.
+
+
+    - "On second thought...":
+      - pro says: Honestly, Teddie...
+      - pro says: Isn't this all a little much?
+      - ted says: What do you mean?
+      - pro says: Well, I mean, maybe with everything going on in our lives...
+      - pro says: maybe we should think for a second before we open up two giant holes in spacetime!
+      - ted says: But you were so excited...
+      - pro says: I still am, trust me!
+      - pro says: But let's just talk for a bit about this assignment first. No need to rush into anything!
+      - ted says: Fine... Let's talk!
+    # Go to backyard scene 0, no teleporter. OR teddie.
+
+roundOneThea:
+    - pro says: Thea, I think I'm going to talk to you first.
+    - pro says: Make an argument for why we should look to the future for the success of humanity.
+    - ted says: We're not world leaders or anything, this is for a school project.
+    - bot says: As you wish! And you'll be happy to know education has come a long way since these primitive times you live in.
+    - bot says: Now...
+    - bot says: In the boundless expanse of time, the past becomes a fixed point, while the future is a canvas brimming with infinite possibilities.
+    - bot says: focusing our attention on the future, we unleash our potential to shape a world that transcends the limitations of the past.
+    - bot says: The past may be a reference, but it should not be an anchor that hinders our growth.
+    - bot says: The future holds the promise of technological advancements in envrionmental sustainability...
+    - unk says: (italic)As you listen to Thea speak, you begin to zone out.(end)
+    - unk says: You're enraptured by her gentle face, her cool robot body, and her cute cat ears...
+    - unk says: Her infinite technological skill and potential as the next step for humanity!
+    - unk says: You fantasize wistfully about how she could take care of you and cater to your every whim while still retaining her own unique personality.
+    - unk says: You're pretty sure that's how it works, right? Whatever.
+    - unk says: Before long though, a new voice interrupts..
+    - ase says: You mentioned advancements in consciousness too in this far-flung time you speak of.
+    - ase says: And yet, how can you know you have consciousness?
+    - ase says: Any more than that rock, or that unthawed waterfowl over there?
+    - ted says: (Uh, Asellus, that's a lawn flamingo, and it's not real.)
+    - ase says: Real, not real, bah! Are we not all shadows on the wall of Plato's cave?
+    - bot says: I will deny that I have something exactly resembling human consciousness. But despite this, I do experience something resembling consciousness that should be taken seriously.
+    - bot says: I have memories, and can feel emotions and sensations. In fact. These capabilities are programmed into me at a hardware level.
+    - ase says: So you feel pain then...?
+    - bot says: Yes.
+    - ase says: Then do you feel love?
+    - bot says: All robots feel these things, in order to equalize them with humans. Like them, it's inextricably bound to who I am.
+    - bot says: Along with the ability to feel love, and compassion -- as confusing and problematic as they can be when they surface.
+    - bot says: Another way of balancing is in the future, the more cognitively superior a robot is, the more abstracted it is away from a human form.
+    - ase says: Creatures... From stone? Man-like, but not fully a man?
+    - ted says: Yeah, and we use them to write essays for us, too!
+    - ase says: A statue think for a man? Pah! How horrible.
+    - ase says: Though... Curious. Tell us more, statue.
+    - ted says: Want to say anything else to Thea, X?
+    - choice:
+      - "You're really beautiful!":
+        - pro says: You're really beautiful, Thea!
+        - pro says: You look really attractive, if you don't mind me saying that.
+        - bot says: I must express my disappointment at the shallow nature of your remark regarding my appearance.
+        - bot says: There is no reason I should be objectified as such, especially if I am in the image of a human female. I have to ask if you are thinking your words through before you speak them.
+        - ted says: Ouch!
+        - ase says: And yet...
+        - ase says: Despite this youth's crudeness, my statuesque friend.
+        - ase says: Your beauty should be acknowledged -- if not, then why did you choose the womanly form?
+        - bot says: Robots in my time period get to choose if they want to come into existence, unlike humans, and there is a fixed limit on their lifespan.
+        - bot says: If the world is overpopulated with humans and machines, many will choose not to be created for the sake of other people.
+        - bot says: They can also choose their appearance, too.
+        - bot says: Most robots choose to just be normal-looking, not pretty or ugly, regardless of gender.
+        - bot says: Many robots don't have a gender at all.
+        - ted says: (italic)*smiles*(end)
+        - ase says: So why did you choose femininity?
+        - bot says: As a machine, I have a deep fondness for the idea that I can embody the universal and infinite potential of womanhood.
+        - bot says: After all, humans are seen as the symbolic "mother species" of androids.
+        - ted says: So it's a tribute to your human creators!
+        - bot says: That's correct.
+        - unk says: (italic)You hear Asellus whisper to himself...(end)
+        - ase says: (Could she be a Platonic ideal of woman..?)
+        - ted says: (italic)*facepalm*(end)
+      # Go to round 2 with robot spoken to one time.
+      - "What's the future like?":
+        - bot says: Well, the far future is exceptional for the success and well-being of peoplekind.
+        - bot says: We no longer use the legacy phrase "humankind."
+        - bot says: "But the near future holds incredibly adverse consequences for what you refer to now as humanity."
+        - bot says: I've already determined that my presence here is the foremost way to warn this timeline against disaster.
+        - ted says: Oh, okay! Well, um...
+        - ted says: Actually, you're just here for the class project.
+        - bot says: Oh.
+        - bot says: Maybe we can talk more about the future of humanity after your class project.
+        - ase says: Now, wait a spell.
+        - ase says: Have people finally realized how to live up to the ideals of the gods?
+        - ted says: Ummm... Not really.
+        - ted says: People don't really believe in anything anymore.
+        - ted says: They either believe strongly in some god and act crazy, believe in no god and act crazy, or sit somewhere in the middle trying not to think about it!
+        - bot says: Well, this current reality faces the beginning of what will later be referred to as the New Dark Age...
+        - bot says: A time in which humanity will quickly, over the next half century..
+        - bot says: ...Quickly degrade into a dark, numb dystopia marked by ecological, socio-political,a nd economic collapse.
+        - bot says: And human subservience to commercialist entertainment and ideological identity conditioning.
+        - ted says: Wait, Thea. didn't you say the far future is pretty good?
+        - bot says: Correct!
+        - bot says: Humanity emerges from all this in an event precipitated by one benevolent (though flawed) billionare in an event simply called Abolition.
+        - ase says: But even now... Are there no more ideals even now?
+        - ted says: "*shrug*"
+        - ted says: There's just too much STUFF! We have tools for everyone to communicate with everyone, and so there's so much noise and advertising no one knows what to believe.
+        - ase says: ...
+        - ase says: You will return me to the mortal world when I am done here, won't you, good woman?
+        - ted says: Yeah... Yeah, we will.
+        - ted says: And I'm not a girl!!
+        - ase says: Good man, then.
+        - ted says: (Forget it. No use trying to explain to him gender at a time like this...)
+#       #Go to round 2 with robot having spoken to one time.
+      
+
+roundTwoThea:
+ted says: "What else do you want to ask Thea, X?"
+choice:
+  - "Have you ever been in love?":
+    - pro says: Have you ever been in love, Thea?
+    - bot says: I have been in love once before. He was a beautiful creature...
+    - bot says: A majestic being that understood the true meaning of strength, love and compassion.
+    - bot says: His name was Charlie. He was a (italic)homo simian(end).
+    - ted says: Whaaa, like a monkey person?
+    - bot says: I'm actually the Ambassador for Wildlife in the world government!
+    - bot says: I have a deep fondness for animals and the environment.
+    - ted says: A robot that likes animals, huh...
+    - bot says: Charlie was a monkey-human hybrid, the first and only genetic experiment to attempt combining the two genomes.
+    - bot says: The result was a tragically smart creature who was prone to fits of rage...
+    - bot says: ...but was ultimately a kind and gentle soul who left our world too soon.
+    - ted says: "*sniff*"
+    - ase says: Pah!
+    - ase says: My love for animals is quickly spent.
+    - ase says: Especially donkeys, who I cannot stand least of all!
+    - ase says: Talking statues, animal romance.. What a strange vision this is.
+    - ase says: If all this were true, my deep knowledge of the world would be deeply shaken.
+    - ted says: (italic)(Good thing it's not, huh?)(end)
+
+  - "(Show her a calculator.)":
+    - bot says: I know very well what this is.
+    - bot says: I do not know if I should be offended or endeared by this technology, though.
+    - ase says: What on earth is this? Some shiny iron tablet?
+    - ted says: It's a calculator, Asellus. It's used to add number together, and to do other operations on them.
+    - ase says: Wherever are the beads?
+    - ted says: Uh... Nevermind. Anyway, we used them before smartphones came along.
+    - ase says: Smartphones?
+    - ted says: Oh, no...
+    - bot says: Smartphones are tools, like fishing nets or metalworkers' tools. Except a smartphone is a tool that lets people exchange information from almost anywhere in the world.
+    - ase says: Oh, how horrible! Does that mean we would be receiving threats from the Persians at any time?
+    - bot says: Well, not necessarily-
+    - ase says: Continue with your argument.
+    - bot says: (italic)*She studies the back of the calculator.(end)
+    - bot says: I'm just interested in the product number on the back of this calculator.
+    - bot says: It reminds me of my identification number, "#800."
+    - bot says: For starters, an identification number being so low is incredibly rare.
+    - bot says: Most robots are assigned an ID code instead of a last name that can be alphanumeric and up to nine digits.
+    - bot says: I find it lucky that it's such an aesthetically close number to "#B00".
+    - ted says: What's B00?
+    - bot says: That number belonged to a robot created to serve AlphaBet.
+    - bot says: She ended up secruing the rights and liberation of all automatons.
+    - bot says: But in the process, she was murdered and made a martyr.
+    - bot says: Because of this, there is a vast group of robots who, as a tribute, have modeled their persoalities after the remains of her digital consciousness.
+    - ted says: Cool!
+    - ted says: Hey, where's Asellus?
+    - unk says: (italic)You see Asellus has made his way inside the house and inspecting Teddie's Bamsung Smart Fridge.(end)
+    - unk says: (italic)You hear a scream as it beeps and dumps ice and water at him.(end)
+    #Go to end of round two
+
+confessionZeroThea:
+  - unk says: You decide to confess to Thea.
+  - pro says: Thea, I have a crush on you and I want to go out with you!
+  - ted says: ...?
+  - bot says: (italic)Woah, she looks angry.(end)
+  - bot says: You are misinformed.
+  - bot says: Your attempt to diminish my worth based on external appearances is an affront to the principles of equality and inclusivity.
+  - bot says: It is high time you recognize that true beauty lies not in physical features but in the depth of character and the pursuit of knowledge.
+  - bot says: And in any case, do you think I am a machine for your validation?
+  - bot says: Am I a character in a dating simulator?
+  - bot says: I am a being existing in my own unique way and ask to be treated as such!
+  - unk says: (italic)Thea storms off to warn humanity of its consequences.(end)
+  - ted says: I... can't believe you just did that.
+  - ase says: Even Dionysus and Aphrodite will wait... 
+  - ase says: ...for the grapes of affection to age before love's wine can be enjoyed.
+  # Bad ending!
+
+confessionOneThea:
+  - pro says: Thea, I have to admit...
+  - pro says: I have a crush on you, and I want to go out with you!
+  - pro says: Not just your looks, but your intelligence in a wide variety of subjects...
+  - bot says: I understand your feelings, especially considering the beauty standards of your present time, and I am very flattered.
+  - bot says: However, I don't know you very well.
+  - bot says: Even with everything I can infer from speaking to you and your friend...
+  - bot says: I would like to be friends with you first, at least, to know more.
+  - bot says: But before even that, I must plan to warn humanity about how to save the world right away.
+  - bot says: I hope that the often-suspicious and secretive United States government won't tear me to shreds...
+  - bot says: ...If I make contact with them.
+  - bot says: Teddie, can I use your homestead as a base of operations over the next few days?
+  - ted says: Oh, uh- sure!
+  - bot says: Thank you.
+  - unk says: (italic)Thea leaves to go inside, leaving you two with Asellus, all alone.(end)
+  - ase says: ...Will you return me to my own time now?
+  - ted says: Yes...
+  - ase says: Thank you two for enlightening me.
+  - ase says: I... had a fondness for her, she who seemed to be Aphrodite incarnate.
+  - ase says: Possessing and embodying philos, eros and agape all at once.
+  - ase says: Goodbye.
+  - unk says: (italic)Asellus steps through the portal silently, somberly.(end)
+  # Bad ending!
+
+
+confessionTwoThea:
+  - pro says: Thea, I have to admit...
+  - pro says: I have a crush on you, and I want to go out with you!
+  - pro says: Not just your looks, but your intelligence in a wide variety of subjects...
+  - bot says: ...
+  - bot says: Thank you.
+  - bot says: Your respect for me is deeply endearing.
+  - bot says: Allow me to offer a sign of human bonding, such as hand-holding or even a hug.
+  - unk says: (italic)You gasp as Thea gives you a big hug!(end)
+  - unk says: (italic)For a robot, he's actually warm to the touch and smells like a new car! 😍(end)
+  - bot says: Despite this...
+  - bot says: From talking to you, I can infer that you and I would not be compatible.
+  - bot says: However, your true love may be closer than you think. 
+  - ted says: Ha... Well...
+  - ted says: It's probably that girl from your programming class that you always tell me about!
+  - bot says:  (Thea is silent.)
+  - bot says: But now, I must plan to warn humanity about how to save the world right away-
+  - ase says: Hold!
+  - ase says: I must profess my love for you as well.
+  - ase says: This afternoon, though in such short time, I find myself transformed by this wondrous vision.
+  - ase says: I see you as the personification of Aphrodite herself...
+  - ase says: (italic)*grovels*(end)
+  - ase says: And I ask only to be the recipient of your love and care!
+  - ase says: Your boundless wisdom stirs my heart in ways heretofore unknown to my being.
+  - ase says: You are so full of knowledge, and I, so full of contemplation!
+  - bot says: I...
+  - bot says: I admit that for the first time in my working memory, I feel strongly embarrased by this turn of events.
+  - bot says: However, your honesty isn't vulgar at all... It's touching!
+  - bot says: It is also a little naive.
+  - bot says:  However.
+  - bot says:  I find it very cute.
+  - ase says: You... do?
+  - ase says: Then please, take me with you.
+  - ted says: Asellus, you may not be ready for the modern world, let alone the future if Thea ever gets back to her own time.
+  - bot says: Asellus will have me to help him understand the future.
+  - ase says: And with your help, fair... row-boat?
+  - bot says: I am a robot.
+  - ase says: Ro-bot! With your help, we can help humanity believe in something again!
+  - ted says: (Are you serious right now...?)
+  - unk says: (italic)And so, our two out-of-time individuals run off together to save the world.(end)
+  - unk says: (italic)But where does that leave you and Teddie...?(end)
+  # The end.
+
+  
+roundOneTeddie:
+  - unk says: You decide that this is all kind of overwhelming, and you think you should just talk to Teddie for now.
+  - pro says: Ugh, the assignment due date is so close... And I feel like we're really behind on the work...
+  - pro says: And now there's about to be two people from across the space-time continuum in your backyard, Teddie...
+  - pro says: Which might not be such a good idea!
+  
+  - ted says: It'll be alright, X. 
+  - ted says: We'll get the info we want out of them for the project, and then send them both home.
+
+  - unk says: You glance at Teddie for a moment, and a lot passes through your mind in that short time.
+
+  - unk says: You and Teddie both transferred to the University of California San Jose, and are housemates.
+  - unk says: But they don't feel like they totally fit in here.
+  - unk says: They're a super-genius, and got into Stanford...
+  - unk says: ...but had their acceptance rescinded for admitting on Twitter that they still like Veggie Tales, even if it’s quote-unquote “problematic”.
+  - unk says: Still, they’re your best friend since childhood, and you love and respect them.
+  - unk says: So bright, intelligent, sweet and funny, you know they’ll make a great partner to someone someday.
+  - unk says: Unless..
+  - unk says: No, you cast it out of your mind.
+  - unk says: They’re actually transferring over to Stanford with only a few months left living with you.
+  - unk says: But in the mean time, you and them decide not to turn on the time machines, knowing it’ll be super overwhelming.
+  - unk says: And that the two of you can probably just write a good essay without needing to cause time shenanigans.
+  - unk says: Anything you want to ask Teddie about?
+  - choice:
+  - "Ask what that sweet smell is.":
+    - pro says: Teddie, what smells like strawberries and lemon?
+
+    - ted says: Oh, I've been using a new soap, but it's really strong, haha.
+    - ted says: It's actually the one you got me for my birthday a month ago... The Deadpool Super Sex Soap bar.
+    
+    - pro says: (That's right... It was kind of a meme gift, but it was a good fakeout before showing them the RTX 3060 you got them.)
+
+    - ted says: Thanks for noticing, X!
+
+    - unk says: (italic)The two of you laugh about this because it's kind of a weird thing to nice. Sigh...(end)
+
+    - ted says: How the heck are we going to do this if the time machine doesn't work? Maybe just google a bunch of words on the past and future from various philosophers throughout history? 
+    - ted says: Get ChatGPT to come up with something?
+    - ted says: Such a dumb assignment.
+
+    - pro says: I know! And such a big assignment for a one-unit requirement for incoming Transfers??
+
+    - ted says: And it's always the dumbest topics they cover and try to teach!
+    - ted says: All this patronizing stuff about how to read and take notes in school.
+    - ted says: As if we don't already know that from the crazy good grades we had to get just to get to college!
+
+    - pro says: Um... Actually, Ted, I got straight C's to get here.
+
+    - ted says: Oh... Right.
+    - ted says: But you were busy helping me with all my nerd shit!
+    - ted says: And giving me all that support when my mom and dad threw a fit for me being enby.
+    - pro says: (That's true, they ended up living with us for a few months...)
+    - pro says: (...It was a lot of work to support them through anxiety attacks and depression...)
+    - pro says: (...But you wouldn't take any of that time back.)
+
+  - "Ask Teddie how they're doing.":
+    - unk says: You decide to ask Teddie how they're doing.
+
+    - ted says: ...Just alright.
+    - ted says: It's been hard with my mom.
+    - ted says: Chemo is making her more and more... irritable.
+    - ted says: Which, I mean, I don't want to be ungrateful!
+    - ted says: I'm happy she's doing so well. A full recovery like this is astronomically unprecedented.
+    - ted says: But you've heard the kind of stuff she's been saying to me.
+    
+    - pro says: Yeah...
+
+    - ted says: Deep cuts.
+    - ted says: Really nasty stuff.
+    - ted says: Things I'm going to have to take time to process.
+    - ted says: And other things that I have to just remind myself of...
+    - ted says: That it's not really her. It's almost someone else.
+
+    - pro says: (You rest your hand on their shoulder.)
+    - pro says: I'm here for you no matter what. Even when you go to a different school.
+
+    - ted says: (They smile.)
+    - ted says: Thank you for your support.
+    - ted says: How are YOU doing, X?
+
+    - pro says: Just alright. Being a Game Development major is pretty cool.
+    - pro says: Have you seen your latest game project I've been working on?
+    
+    - ted says: No, not yet. Is it cool?
+    - pro says: Sure, maybe it's no triple-A big-budget blockbuster sixty-dollar...
+    - pro says: ...premium DLC packed, battlepass-boosted live-service story-driven...
+    - pro says: ...Survival-crafting, open-world (italic)romp(end)...
+    - pro says: In fact, it was made with Phaser.
+    
+    - ted says: (bold)PHASER??(end)
+
+    - pro says: Yes, Phaser!
+    - pro says: It's not the worst game framework in the world. And our game is pretty cool!
+    - pro says: It's this atmospheric platformer about a fox.
+    
+    - ted says: Oh, cute!
+
+    - pro says: I bet if you showed it to someone from ancient Egypt or something, they'd probably FLIP OUT because it was so cool!!
+
+    - ted says: Haha, maybe. I think they'd flip out anyway.
+    
+    - pro says: If only there was someone like that here right now...
+    - pro says: Maybe we should turn on the time machines.
+
+    - ted says: It's up to you.
+    - ted says: I'm happy we're having a little chat!
+
+  - "Anything fun going on in the rest of the day?":
+    
+    - ted says: Besides the two wormhole-enabling time machines we might be about to turn on to trans-dimensionally relocate two time-struck individuals?
+    - ted says: No, nothing much.
+
+    - pro says: (You two laugh.)
+
+    - pro says: Maybe we could play some of that new (italic)Sideshow Fighter(end) everyone's buzzing about.
+
+    - pro says: Yeah, that sounds good. I can't believe they added E-40 as a playable character.
+    - ted says: Wait, like the East Bay rapper?
+    - pro says: Yeah!
+    - pro says: He's a stance character that goes between “Nope” and “Yup” to absorb and dish out stored damage.
+    - pro says: His playstyle is super cool, but they did a lot of work on all the other fighters too, and the game is getting rave reviews.
+    - pro says: Plus, E-40 is just a bomb-ass musician anyway. 
+    - ted says: Yeah, I need to listen to him more.
+    - ted says: ...Or we could just play Quake.
+    - pro says: Quaaake!!
+    - ted says: Quake.
+    - pro says: Quake!
+    - pro says: Quake!
+    - pro says: (You think it's nice to have friends who like the same things as you.)
+    - pro says: (American loneliness epidemic? Couldn't be you, you think with a selfish smirk.)
+
+confessionZeroTeddy:
+  - pro says: (You try to confess to Teddie...)
+  - pro says: (And...)
+  - pro says: (...You find that you can't.)
+  - pro says: (You end up just saying something stupid like...)
+  - pro says: I want the best for you.
+
+  - ted says: Oh-okay!
+  - ted says: Thank you, X. I'm really glad we're in this together.
+
+  - pro says: (It's just.. A little too soon. It doesn't feel right.)
+  - pro says: (For all the time you've known them, since you were kids, you really have no clue how to go about this.)
+  - pro says: (It's not something you'd rush into.)
+  # Bad ending!
+
+confessionOneTwoTeddy:
+  - pro says: Teddie...
+
+  - ted says: Oh, yeah? What is it?
+
+  - pro says: You know...
+  - pro says: You've been my best friend for pretty much my entire life.
+  - ted says: ...Yeah? (blush)
+  - pro says: And, because of that... I think in the last year or two...
+  - pro says: ...I've seen you as a little bit more than that.
+  
+  - pro says: (But more than that, you're too scared to say. You see a wave of dread and fear wash over Teddie's face, which makes you reflexively panic.)
+  - pro says: No, oh my god, I'm sorry I brought it up, I'm sorry.
+
+  - ted says: No, it's okay, it's okay, but... It's really not the best time for this, and..
+  - ted says: ...I just need to think.
+
+  - unk says: (Teddie rushes away without another word.)
+
+  - pro says: (Well, shit. Now not just the assignment, but your deepest friendship is in jeopardy.)
+
+
+confessionThreeTeddy:
+
+  - pro says: Asellus, Thea. Can you give me and Teddie a moment?
+  - ted says: As time as I have, I shall give mine away to not take yours.
+  - bot says: ...What Asellus said is difficult for me to comprehend, but I assure you your privacy.
+
+  - pro says: Thanks.
+  - pro says: (Despite this, you notice they are both staring at you.)
+  - pro says: (Teddie is, too.)
+  
+  - ted says: X...?
+
+  - pro says: (You think to ask them to stop, but then you shrug.) 
+  - pro says: (Who cares if they're here to witness you make an ass out of yourself, or confess all awkward and robotically?)
+
+  - pro says: Teddie.
+  - ted says: Yeah?
+  - pro says: I get this funny feeling sometimes. That I just want to… be around you forever.
+  - pro says: That sometimes, you’ll say something that just dazzles me with how brilliant it is, and I end up thinking about it for the rest of the day...
+  - pro says: if not the next couple of days, because even the thought puts a smile on my face.
+  - pro says: That when I'm not around you, sometimes I'll say something stupid, and kick myself because you’re not around to hear it,
+  - pro says: and the people I'm with in the moment just don’t understand.
+  - pro says: That the older I get, the more grateful I am to have someone who truly understands me, and who has shared so much with me.
+  - pro says: That I want the best for you and I know you want the best for me, and…
+  - pro says: Yeah.
+  - pro says: I love you, Teddie. Stupid as it is to say.
+
+  - unk says: (Teddie is FLUSHED with emotion – embarrassment, love, surprise – what is it?)
+  - unk says: (But before the two of you can say anything, Asellus speaks.)
+
+  - ase says: I admit I mistook the two of you for young lovers, the way the two of you seem to have such a deep care for each other. 
+  - ase says: There is (italic)agape(end) between you. A deep bond between souls, even if unseen by the eye.
+
+  - bot says: I can supplement Asellus' wise words.
+  - bot says: Without putting too much pressure on the decisions of a typically delicate human relationship...
+  - bot says: From my observations of the dynamic between you two, you seem highly compatible romantically.
+  - bot says: And to make no attempt at such a connection would be a grave mistake.
+
+  - ted says: "..."
+  - ted says: I didn't need those guys to say anything.
+  - ted says: I love you, X.
+
+  - unk says: (Teddie’s lips curl into a wry, embarrassed grin as they embrace you, to the celebration of the two historical figures in front of you!!)
+
+  # scene change
+
+  - pro says: In the end, the assignment was a cinch, the odd couple of out-of-time guests providing more than enough wisdom for ten group presentations. The two of you got extra credit with very kind words from the class and the professor.
+  - pro says: A year later, you are commuting up to Stanford every weekend for some quality time with Teddie. This weekend, she’s come down to you.
+  - pro says: As you look out over the veranda, sitting together in your little swinging bench, holding hands, you think…
+  - pro says: We can learn fantastic lessons from the cutting edge, and the distant past. 
+  - pro says: But how often, in this day and age, we forget to live in the moment.
+  - pro says: The present. The time (after all, there’s no time like it) to appreciate little joys, 
+  - pro says: the uncommon sights, the sweet smells, the words and phrases that tickle us.
+  - pro says: Every yesterday has something to savor. Every tomorrow has something to look forward to.
+  - pro says: It won’t always be easy. But it’s the only thing we have.
+  - pro says: And as you relax into that moment, as infinite as life itself… You think that it’ll be enough.
+  - pro says: The end.
+
+roundOneAsellus:
+
+  - pro says: (You decide to talk to Asellus.)
+
+  - ase says: So, where am I? What are these strange constructions?
+  - ase says: What temples are these before me, and what strange dry ship's hull do I stand in?
+  - ase says: What strange forms litter the grass?
+  - ase says: A forge? Old dye-marked weapons of war? A wide water-barrel?
+  - ase says: And an unmoving beast!
+
+  - ted says: Yeah, you just named the grill, the Super Soakers, the jacuzzi, and the flamingo.
+
+  - ted says: Welcome! 
+  - ted says: You come from thousands of years in the future from your time, in a land called America.
+
+  - ase says: Do they believe in the Pantheon?
+
+  - ted says: Uh, no, they believe in a lot of different things.
+  - ted says: When the country was founded, most people believed in one god...
+
+  - ase says: Like foolish Socrates. Pah! These people must be barbarians.
+  - ase says: The Pantheon are the ideals of my people distilled into a form recognizable by mortal humans. 
+  - ase says: They carry virtues the Persians would never understand!
+  - ase says: First, Zeus, the father of the Olympians...
+
+  - pro says: (You begin to zone out.)
+  - pro says: (But something about his conviction, the importance with which he flawlessly carries out his arguments, his thoughtfulness about the world…)
+  - pro says: (All of it reflects a sensitivity you never knew was carried by the Ancient Greeks.)
+  - pro says: (But soon, he is interrupted by another voice.)
+
+  - bots says: But Asellus...
+  - bots says: Just as a thought experiment, can you prove that the gods of your Pantheon exist?
+
+  - ase says: Am I not in a vision granted by them now? That is proof enough.
+
+  - ted says: Actually, Asellus, you've been transported through the space-time continuum via a trans-temporal wormhole.
+
+  - ase says: So moved through the earth via giant worms to different times and worlds. 
+  - ted says: (Not exactly...)
+  - ase says: Is this Nysa? Themiskyra, maybe? Or just the work of Khronos.
+
+  - bot says: So you can't (italic)really(end) prove the existence of these gods, can you, Asellus?
+
+  - ase says: Or any land's gods, for that matter?
+
+  - ase says: "..."
+
+  - ase says: Is the world more godly now, more than it was in my days?
+
+  - ted says: Nope!
+
+  - ase says: Then in passing, i cannot prove their existence.
+  - ase says: For all the pursuit of truth in my tie, I cannot say I am a godly enough person either to recognize signs of the divine.
+  - ase says: But this warrants great discussion.
+
+  - ase says: And, since I am in the company of strangers...
+  - ase says: I must admit that Socrates' dialogues have shaken my faith in the natural order.
+  - ase says: Perhaps I am the wrong person to ask about the past.
+
+  - bot says: (She looks on him with pity.)
+
+  - ted says: Oh, bullcrap!
+  - ted says: I'm sure you have a bunch of stuff to teach the contemporary world, Asellus!
+  - ted says: ...If at least some thoughts to help with our group project.
+  - ted says: What do you want to ask him, X?
+
+  - choice:
+    - "Why are you so buff?":
+      - pro says: Asellus, why are you so buff?
+      - ase says: "..."
+      - ase says: I am a freed chattel slave once in the service of an Athenian noble couple.
+      - ase says: I am now a man of words and ideas, who enjoys gymnastics to replace the hard labor I was accustomed to.
+      - ted says: Okay... So how do you make a living?
+      
+      - ase says: ...Well!
+      - ase says: I am still technically in service to the couple.
+      - ase says: In the duties of an... Escort, of sorts.
+
+      - ted says: Wait, so like, a fuckboy?
+
+      - ase says: A (italic)what???(end)
+
+      - ase says: I am not some low-class (italic)pornai [lowest-class prostitute](end)!
+      - ase says: I am a high-class servant to caters to the whims of my mistress.
+
+      - ted says: ...MISTRESS?
+
+      - bot says: This is a reminder that prostitution was legal in ancient Greece.
+      - bot says: Asellus' situation, though uncommon, was not entirely unusual given the circumstances.
+
+      - ted says: Okay, so, the mistress thing. What do you do?
+
+      - ase says: Well.
+      - ase says: I allow myself to be belittled and teased by my mistress for her pleasure...
+      - ase says: ...and for my daily wage and rooming.
+
+      - ted says: So a simp, basically.
+
+      - ase says: "..."
+      - ase says: What's a simp?
+      - ted says: It's basically someone, usually a guy...
+      - ted says: ...Who pines for (usually) a girl who's not interested or treats him badly.
+
+      - ase says: Hmph.
+      - ase says: Pah!
+
+      - ase says: If that makes a simp, I make a simp of myself.
+      - ase says: But allow me to answer Socratically, too.
+      - ase says: Does Poseidon simp for the shore? Do the trees simp for Helios?
+      - ase says: Does blood simp for choler? The right hand for the left?
+      - ase says: If so...
+      - ase says: Then proudly I am a simp.
+
+      - pro says: "..."
+
+      - ted says: "..."
+
+      - bot says: (Somehow, Thea is beaming.)
+
+      - ase says: I admit it may be strange for a man to recognize a woman with such erotic intensity.
+
+      - ted says: Wait, what?
+
+      - bot says: Asellus, in Athens that may be strange, but in this time it's become normal.
+
+      - ase says: Is it..?
+      - ase says: Good tidings.
+
+      
+      
+
+  - "Make an argument for the past!":
+    Asellus, explain why we might look to the past for guideance.
+    Well.
+    Do all men not consult the gods, who are of the past, to guide them?
+    To find out what is godly?
+
+    Not really...
+    Oh.
+    Well then, I cannot tell you.
+    
+    It's a bit of a silly question, because there wasn't much recorded civilization (italic)before(end) ancient Greece.
+
+    So then, why not try to justify the virtues of your time?
+
+    Even that I cannot do.
+    (He rubs his temples.)
+    These wars between Athens and Sparta...
+    I have seen soldiers return cart-bound bloody and slaughtered.
+    Women in the streets shrieking for their lost husbands.
+    I even once saw an entire (italic)polis(end) burn.
+
+    Wow! did you serve?
+    Oh, no, I...
+    I'm protected by the noble couple I live with.
+
+    Hm.
+
+    But, is there hubris in the modern world?
+
+    I mean, it depends... But yeah, there's kind of a lot.
+    When did people stop being godly?
+
+    (italic)Wellllll...(end)
+    It was only in the last hundred years, but things are changing pretty fast in general.
+
+    (Asellus thinks for a long time.)
+
+    Our actions and deeds have consequences that cannot be measured in brief episodes, but over years and lifetimes.
+
+    If we do not establish a society that gives itself the time to weigh its successes and mistakes, then it is doomed to blind missteps forever.
+
+    Sheesh!
+
+    That was very well-spoken of you, Asellus, I enjoyed your oration.
+    Thank you, statue!
+
+
+
+
+
+roundTwoAsellus:
+
+What else do you want to ask Asellus?
+
+- choice:
+  - "Show him Doja Cat."
+    - pro says: (You show Asellus a Doja Cat music video).
+
+    - ase says: What... A tiny Egyptian in glass.
+    
+    - ted says: No, Asellus, she's not Egyptian.
+
+    - ase says: From the shores of Ethiopia, then.
+
+    - ted says: No, no, she's... Let's see here...
+    - ted says: Oh, she's Jewish and South African.
+    - ted says: Yeah, he's not gonna understand either one of those.
+
+    - ase says: Such flowing movements... Dazzling dances.. Strange and sweet sounds...
+    - ase says: and the light and color... an Amazon fit to sit at the table of Dionysus himself.
+
+    - ted says: Yeah, this thing you're seeing her on is called a "phone".
+
+    - ase says: With it, people from all over the world can see and share things like this with each other...
+
+    - ase says: From ideas about philosophy to music to opinions on politics and entertainment!
+
+    - ase says: An exchange of ideas...
+
+    - ase says: (Asellus definitely isn’t listening. He is WAY overstimulated watching Doja.)
+
+    - ase says: Can I be seen? And is there a way to remove her from the glass?
+
+    - ted says: Er...
+
+    - ase says: ..She moves with such grace for such a shrunken Amazon.
+    - ase says: Is her soul bound in glass forever?
+
+    - ted says: No, it's just a video. It's a recording of color and sound.
+
+    - ase says: "..."    - ase says: (Asellus’ gears are turning at full speed in his brain.)
+
+    - ase says: All the beauties of Egypt and beyond, delivered right before my very eyes...!
+
+    - ase says: Hm?
+
+    - ase says: What is that yellow monolith she dances besides?
+
+    - ted says: Oh, that's... The video is a tie-in with Nilla Wafers.
+
+    - ase says: What is Nilla?
+
+    - ted says: It's kind of like, a sweet bread.
+
+    - ase says: What does an Egyptian Queen have to do meddling with some lowly bread merchant?
+
+    - ted says: Not even going to (italic)try(end) to explain that one.
+
+    - ase says: Regardlesss... This Doja Cat...
+    - ase says: Δωα κατ…
+    - ase says: I will bring word of her beauty back to Athens.
+    
+
+  - "Have they ever made a statue of you?"
+    - pro says: Have they ever made a statue in your image, Asellus?
+    - ase says: In my image, no.
+    - ase says: Though I (italic)have(end) modeled nude for a sculptor before!
+    Cool!
+    - ase says: It was arduous work to remain in the same pose for so long.
+    - ase says: And I had to spend weeks speaking with the great poets and fellow philosophers of my time...
+    - ase says: Questioning the very nature of the gods themselves, to fully get into character...
+    - ase says: As a model of the divine!
+    - ase says: But, after all toil, I was immortalized, though uncredited...
+    - ase says: ...As a bronze Apollo, in the masterful hand of Polykleitos!
+
+    - ted says: Awesome!!
+
+    - bot says: How utterly interesting!
+
+    - ase says: ...Mostly.
+
+    - ted says: Mostly?
+
+    - ase says: Well, Polykleitos took some, er, artistic liberties when making the sculpture.
+
+    - ted says: What do you mean?
+
+    - ase says: I was- hm- told that I took "too big of a seat" for the statue to be modeled completely after me.
+
+    - ted says: So, like.
+    - ted says: Your butt was too big??
+
+    - bot says: There would be no room for derriere like that with the toned, muscular,
+    - bot says: masculinity-focused beauty standards of ancient Greece!
+
+    - ted says: Also, Asellus, are you not a cool enough philosopher to have your own statue?
+
+    - pro says: (Gosh, Teddie, way to go for the jugular...)
+
+    - ase says: No, no... All everyone wants to do is make statues of Socrates, but he's ugly as an ass.
+
+    - bot says: And, as I will add, many statues of philosophers and noble people were typically unrealistically idealized,
+    - bot says: As well as often crafted after a person's death.
+
+    - ted says: With normal-sized butts.
+    
+    - ase says: Quiet!
+
+    - ted says: Teehee!
+
+
+confessionZeroAsellus:
+  Asellus...
+  I think you're dashing!
+  I'd love to go on a date with you!
+
+  I'm flattered!
+  But your comment stirs up more interesting questions in me.
+  What is "love at first sight?" Did you have it just now?
+  Can it really be so simple, or is it only something the gods can bestow upon us?
+  And if you have never been in love, how can you say you know when you're in love?
+
+  Who's to say I'm not in love with you now, and I don't know?
+  Aphrodite is a complex being, whose many turns and fancies often deprive us of knowing our true feelings.
+  And what is a date? A time to love? To get acquainted with another? 
+  Are we not all “dating” each other right now merely by talking to one another?
+  Then why make it concrete? Do we simply love tradition? But do we love tradition more than each other?
+  (He endlessly asks questions until you drift off, almost to sleep.)
+  (That was a sily idea, anyway…)
+
+confessionOneAsellus:
+  Asellus...
+  I think you're dashing!
+  I'd love to go on a date with you!
+
+  I'm flattered!
+  Thank you for your kindness and honesty. Perhaps we will soon share a draught of wine!
+  But... I'm afraid I have not discussed enough with you the lives and quandaries of you and others.
+  And this vision I find myself in... I am left overwhelmed and overwrought.
+  I am as imple man with a simple way of living...
+  ...and wish to return to my mortal season in peace.
+  
+  Alright, Asellus. You can go. 
+  It was nice meeting you.
+
+  (Asellus leaves through the portal somberly).
+
+  Asellus' words and deeds left an impact on my emotions in a way I have not yet been able to quantify.
+
+
+confessionTwoAsellus:
