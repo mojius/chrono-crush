@@ -58,6 +58,7 @@ music:
 sfx:
   ringtoneSFX: assets/audio/nokia6210-24-elise.mp3
   ringtoneSFX2: assets/audio/alcatel-top_secret.mp3
+  ping_sfx: assets/gui/Advance.mp3
 
 extra:
   spritesheets:
