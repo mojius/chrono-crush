@@ -66,7 +66,7 @@ start:
   - pro says: Not just one time machine, but TWO!!!
   - pro says: I asked them, isn't that a little much???
   - pro says: But Teddie doesn't care. They're just headstrong like that.
-# show teddie
+  # show teddie
   - pro says: Teddie Lê...
   - pro says: My best friend since childhood.
   - pro says: They came out as non-binary to their parents just last year.
@@ -138,12 +138,46 @@ startTimeMachine:
   
 nextSelection: 
   # Come back to this scene once you're done with one dialogue scene with Thea or Asellus
+
+  # If talked to Thea previously, go to round two with her. Else, begin conversation with Thea
+  # ^ Same applies with Asellus
+  # Once you have talked to both Thea and Asellus twice, a NEW option will appear with Teddie for Teddie's good ending
+  # ^ or we can have Teddie appear already, and just have her as an interaction for story purposes. No confession or anything.
+
   - pro says: Okay, who to talk to next...
   - choice:
-    # If talked to Thea previously, go to round two with her. Else, begin conversation with Thea
-    # ^ Same applies with Asellus
-    # Once you have talked to both Thea and Asellus twice, a NEW option will appear with Teddie for Teddie's good ending
-    # ^ or we can have Teddie appear already, and just have her as an interaction for story purposes. No confession or anything.
+    # ------------------------------
+    # Thea decision tree
+    - if ({thea_count} == 1): 
+      - "Let's talk to Thea again.":
+        - scene: roundTwoThea
+    - else if ({thea_count} == 0):
+      - "Talk to Thea, the futuristic robot lady.":
+        - scene: roundOneThea
+    - else if ({thea_count} >= 2):
+      - "I'll try talking to Thea once more.":
+        - scene: postRoundThea
+    # ------------------------------
+    
+    # ------------------------------
+    # Asellus Decision Tree
+    - if ({asellus_count} == 1):
+      - "Let's talk to Asellus again.":
+        - scene: roundTwoAsellus
+    - else if ({asellus_count} == 0):
+      - "Talk to Asellus, the ancient Greek philosopher.":
+        - scene: roundOneAsellus
+    - else if ({asellus_count} >= 2):
+      - "I'll try talking to Asellus once again.":
+        - scene: postRoundAsellus
+    # ------------------------------
+
+    # ------------------------------
+    # Add Teddie choice here once you talked to both Asellus and Thea twice
+    - if ({asellus_count} == 2):
+      - if ({thea_count} == 2):
+        - "I should talk to Teddie again":
+          - scene: postRoundTeddie
 
 
 roundOneThea:
