@@ -401,6 +401,8 @@ confessionZeroThea:
   - ase says: Even Dionysus and Aphrodite will wait... 
   - ase says: ...for the grapes of affection to age before love's wine can be enjoyed.
   # Bad ending!
+  - text says: Bad ending!
+  - endgame:
 
 
 confessionOneThea:
@@ -426,6 +428,8 @@ confessionOneThea:
   - ase says: Goodbye.
   - text: Asellus steps through the portal silently, somberly.
   # Bad ending!
+  - text: Bad ending!
+  - endgame:
 
 
 confessionTwoThea:
@@ -470,6 +474,7 @@ confessionTwoThea:
   - text: And so, our two out-of-time individuals run off together to save the world.
   - text: But where does that leave you and Teddie...?
   # The end.
+  - scene: endGame
 
   
 roundOneTeddie:
@@ -655,6 +660,8 @@ confessionZeroTeddy:
   - pro says: (For all the time you've known them, since you were kids, you really have no clue how to go about this.)
   - pro says: (It's not something you'd rush into.)
   # Bad ending!
+  - text says: Bad ending!
+  - endgame:
 
 
 confessionOneTwoTeddy:
@@ -677,6 +684,10 @@ confessionOneTwoTeddy:
   - text: (Teddie rushes away without another word.)
 
   - pro says: (Well, shit. Now not just the assignment, but your deepest friendship is in jeopardy.)
+
+  - text: Bad ending!
+
+  - endgame:
 
 
 confessionThreeTeddy:
@@ -736,6 +747,8 @@ confessionThreeTeddy:
   - pro says: It won’t always be easy. But it’s the only thing we have.
   - pro says: And as you relax into that moment, as infinite as life itself… You think that it’ll be enough.
   - pro says: The end.
+
+  - scene: endGame
 
 
 roundOneAsellus:
@@ -1063,6 +1076,7 @@ confessionZeroAsellus:
   - ase says: Then why make it concrete? Do we simply love tradition? But do we love tradition more than each other?
   - text: (He endlessly asks questions until you drift off, almost to sleep.)
   - text: (That was a sily idea, anyway…)
+  - endgame:
 
 
 confessionOneAsellus:
@@ -1086,6 +1100,7 @@ confessionOneAsellus:
   - bot says: Asellus' words and deeds left an impact on my emotions in a way I have not yet been able to quantify.
 
   - text: The end. (Bad ending.)
+  - endgame:
 
 
 confessionTwoAsellus:
@@ -1138,39 +1153,73 @@ confessionTwoAsellus:
   - ted says: (Are you serious right now...?)
   - text: And so, our two out-of-time individuals run off together to save the world.
   - text: But where does that leave you and Teddie...?
+  - scene: endGame
 
 
 postRoundThea:
-  - bot says: "What did you want to talk about?"
+  - text says: "What did you want to talk about?"
   - choice:
     - "Confess to Thea":
       - scene: confessionTwoThea
     - "Talk to Thea":
       # Fill in dialogue
-      - "I have nothing to discuss anymore."
+      - "There is no other information I'm currently curious about."
+      - scene: postRoundThea
     - "Nevermind, it's nothing":
       - scene: nextSelection
 
 
 postRoundAsellus:
-  - ase says: "What did you want to talk about?"
+  - text says: "What did you want to talk about?"
   - choice:
     - "Confess to Asellus":
       - scene: confessionTwoAsellus
-    - "Talk to Thea":
+    - "Talk to Asellus":
       # Fill in dialogue
       - "I have nothing to discuss anymore."
+      - scene: postRoundAsellus
     - "Nevermind, it's nothing":
       - scene: nextSelection
 
 
 postRoundTeddy:
-  - ted says: "What did you want to talk about?"
+  - text says: "What did you want to talk about?"
   - choice:
-    - "Confess to Thea":
+    - "Confess to Teddy":
       - scene: confessionThreeThea
-    - "Talk to Thea":
+    - "Talk to Theddy":
       # Fill in dialogue
-      - "I have nothing to discuss anymore."
+      - "Shouldn't you be talking to our wonderful guests?"
+      - scene: postRoundTeddy
     - "Nevermind, it's nothing":
       - scene: nextSelection
+
+endGame:
+  - text says: Thank you for playing!
+  - hide all:
+  - effect ROLLINGCREDITS:
+    endGame: true
+    text:
+      - Thank you for playing
+      - Chrono Crush
+      - null
+      - Powered by RenJS
+      - created by lunafromthemoon
+      - null
+      - Production Lead
+      - Ben Daly
+      - null
+      - Art Lead
+      - Cassidy Aydin
+      - null
+      - Programming Lead
+      - Addison Camacho
+      - null
+      - Programming and Art Support
+      - Brandon Jack
+      - null
+      - Music and SFX By
+      - Ben Daly
+      - null
+      - Story written by
+      - Ben Daly
