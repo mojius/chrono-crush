@@ -28,5 +28,6 @@ const RenJSConfig =  {
   'logChoices': true,
 }
 
-const RenJSGame = new RenJS.game(RenJSConfig)
-RenJSGame.launch()
+const RenJSGame = new RenJS.game(RenJSConfig);
+Renjs.addPlugin("text_log", TextLog);
+RenJSGame.launch();
