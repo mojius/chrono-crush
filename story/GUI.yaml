@@ -85,6 +85,11 @@ config:
       'y': 514
       asset: asset25
       binding: skip
+    - type: button
+      x: 724
+      y: 20
+      asset: logBtn
+      binding: showTextLog
   menus:
     main:
       - type: image
@@ -304,6 +309,9 @@ assets:
     asset22:
       name: asset22
       fileName: hudasset22.png
+    logBg:
+      name: logBg
+      fileName: temp_logbg.png
   spritesheets:
     loading-bar:
       name: loading-bar
@@ -380,6 +388,21 @@ assets:
       fileName: saveloadasset40.png
       w: 103
       h: 53
+    logReturnBtn:
+      name: logReturnBtn
+      fileName: temp_returnbtn.png
+      w: 137
+      h: 53
+    logBtn:
+      name: logBtn
+      fileName: temp_logbtn.png
+      w: 56
+      h: 53
+    arrowBtn:
+      name: arrowBtn
+      fileName: temp_arrowbtn.png
+      w: 56
+      h: 45
   fonts:
     fontsaudimat-mono:
       fileName: fontsfontsaudimat-mono.ttf
