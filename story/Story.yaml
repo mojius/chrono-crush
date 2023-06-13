@@ -58,30 +58,30 @@ start:
   - call text_input: var player
   
   # For debugging. REMOVE WHEN DONE!!
-  - scene: roundOneThea
+  ## - scene: roundOneThea
 
-  - pro says: My name is {player}. I'm a junior in college.
-  - pro says: I'm interested in games and computers, but my best friend and I have a whopper of an assignment coming up.
-  - pro says: It's for a required class we both have to take because we transferred into the school.
-  - pro says: The theme is whether we should look to the innovations of the future for the success of humanity, or seek guidance from the traditions of the past.
-  - pro says: But me and my best friend Teddie have ZERO ideas on what to write.
-  - pro says: We're not English majors here, we're STEM people!
-  - pro says: So, as part of a harebrained scheme, Teddie has made some...
-  - pro says: Time machines.
-  - pro says: Not just one time machine, but TWO!!!
-  - pro says: I asked them, isn't that a little much???
-  - pro says: But Teddie doesn't care. They're just headstrong like that.
-  - show ted: happy AT CENTER WITH FADE
-  - pro says: Teddie Lê...
-  - pro says: My best friend since childhood.
-  - pro says: They came out as non-binary to their parents just last year.
-  - pro says: It wasn't so easy. Their parents didn't take it so well.
-  - pro says: But I supported them all the way. And I'm incredibly lucky to have such a dear friend, and for so long!
-  - hide ted: WITH FADE
-  - pro says: ...Huh?
-  - show ted: happy WITH FADE AT CENTER
-  - ted says: Hey, {player}!
-  - ted says: Are we gonna start these time machines, or what?
+  # - pro says: My name is {player}. I'm a junior in college.
+  # - pro says: I'm interested in games and computers, but my best friend and I have a whopper of an assignment coming up.
+  # - pro says: It's for a required class we both have to take because we transferred into the school.
+  # - pro says: The theme is whether we should look to the innovations of the future for the success of humanity, or seek guidance from the traditions of the past.
+  # - pro says: But me and my best friend Teddie have ZERO ideas on what to write.
+  # - pro says: We're not English majors here, we're STEM people!
+  # - pro says: So, as part of a harebrained scheme, Teddie has made some...
+  # - pro says: Time machines.
+  # - pro says: Not just one time machine, but TWO!!!
+  # - pro says: I asked them, isn't that a little much???
+  # - pro says: But Teddie doesn't care. They're just headstrong like that.
+  # - show ted: happy AT CENTER WITH FADE
+  # - pro says: Teddie Lê...
+  # - pro says: My best friend since childhood.
+  # - pro says: They came out as non-binary to their parents just last year.
+  # - pro says: It wasn't so easy. Their parents didn't take it so well.
+  # - pro says: But I supported them all the way. And I'm incredibly lucky to have such a dear friend, and for so long!
+  # - hide ted: WITH FADE
+  # - pro says: ...Huh?
+  # - show ted: happy WITH FADE AT CENTER
+  # - ted says: Hey, {player}!
+  # - ted says: Are we gonna start these time machines, or what?
   - pro says: ...Oh, oh yeah, um...
   - choice:
     # ------------------------------
@@ -104,14 +104,15 @@ start:
       - hide ALL: WITH FADE
       - scene: roundOneTeddie
     # Go to backyard scene 0, no teleporter. OR teddie.
-  
+
+
 startTimeMachine:
   - var time_machine: true
   - show room: WITH FADE
   - text: You watch as Teddie goes over to the two machines, tinkering with them and turning them on.
   - text: Before long, two giant and imposing portals open up! From the left portal emerges a stout figure from the ether...
   - wait: 1000
-  - show: ase WITH FADE
+  # - show: ase WITH FADE
   - ase says: Αυτός είναι ο Άδης
   - pro says: D-did we summon someone from Ancient Greece?
   - ted says: W-wait! I can use an auto-translator on him?
@@ -157,72 +158,100 @@ nextSelection:
   # ^ Same applies with Asellus
   # Once you have talked to both Thea and Asellus twice, a NEW option will appear with Teddie for Teddie's good ending
   # ^ or we can have Teddie appear already, and just have her as an interaction for story purposes. No confession or anything.
-
+  - hide CHARS:
   - pro says: Okay, who to talk to next...
   # ------------------------------
   # Decision tree
-  - if ({thea_count} == 1 && ({asellus_count} == 0)): 
-    - choice:
-      - "Let's talk to Thea again.":
-        - scene: roundTwoThea
-      - "Talk to Asellus, the philosopher.":
-        - scene: roundOneAsellus
 
+  # ------------------------------
+  # Thea: 0, Ase: 1
   - if (({thea_count} == 0) && ({asellus_count} == 1)):
     - choice:
-      - "Talk to Thea, the futuristic robot lady.":
+      - "Talk to Thea, the futuristic robot.":
         - scene: roundOneThea
       - "Let's talk to Asellus again.":
         - scene: roundTwoAsellus
+   # ------------------------------
 
-  - if(({thea_count} >= 2) && ({asellus_count} == 0)):
+   # ------------------------------
+   # Thea: 0, Ase: 2
+  - if (({thea_count} == 0) && ({asellus_count} == 2)):
     - choice:
-      - "I'll try talking to Thea once more.":
-        - scene: postRoundThea
-      - "Talk to Asellus, the philosopher.":
-        - scene: roundOneAsellus
-  
-  # ------------------------------
-
-  - if (({asellus_count} == 1) && ({thea_count} == 0)):
-    - choice:
-      - "Let's talk to Asellus again.":
-        - scene: roundTwoAsellus
-      - "Talk to Thea, the robot lady.":
+      - "Talk to Thea, the futuristic robot.":
         - scene: roundOneThea
-
-  - if (({asellus_count} >= 2) && ({thea_count} == 0)):
-    - choice:
       - "I'll try talking to Asellus again.":
         - scene: postRoundAsellus
-      - "Talk to Thea, the robot lady.":
-        - scene: roundOneThea
-    
-  - if (({asellus_count} >= 2) && ({thea_count == 1})):
+   # ------------------------------
+  
+   # ------------------------------
+   # Thea: 1, Ase: 0
+  - if (({thea_count} == 1) && ({asellus_count} == 0)):
     - choice:
-      - "I'll try talking to Asellus once again.":
-        - scene: postRoundAsellus
       - "Let's talk to Thea again.":
         - scene: roundTwoThea
-  # ------------------------------
+      - "Talk to Asellus, the Greek philosopher.":
+        - scene: roundOneAsellus
+   # ------------------------------
 
-  # ------------------------------
-  # Add Teddie choice here once you talked to both Asellus and Thea twice
-  - if (({asellus_count} == 2) && ({thea_count} == 2)):
-    - choice:
-      - "I'll try talking to Asellus again.":
-        - scene: postRoundAsellus
-      - "I'll try talking to Thea again.":
-        - scene: postRoundThea
+   # ------------------------------
+   # Thea: 1, Ase: 1
+  - if (({thea_count} == 1) && ({asellus_count} == 1)):
+    - choice: 
+      - "Let's talk to Thea again.":
+        - scene: roundTwoThea
+      - "Let's talk to Asellus again.":
+        - scene: roundTwoAsellus
+   # ------------------------------
   
-  - if (({asellus_count} == 2) && ({thea_count} == 2) && ({teddie_count} == 2)):
-    - choice:
-      - "I should talk to Teddy again.":
-        - scene: postRoundTeddy
+   # ------------------------------
+   # Thea: 1, Ase: 2
+  - if (({thea_count} == 1) && ({asellus_count} == 2)):
+    - choice: 
+      - "Let's talk to Thea again.":
+        - scene: roundTwoThea
       - "I'll try talking to Asellus again.":
         - scene: postRoundAsellus
+   # ------------------------------
+  
+   # ------------------------------
+   # Thea: 2, Ase: 0
+  - if (({thea_count} == 2) && ({asellus_count} == 0)):
+    - choice:
       - "I'll try talking to Thea again.":
         - scene: postRoundThea
+      - "Talk to Asellus, the Greek philosopher.":
+        - scene: roundOneAsellus
+   # ------------------------------
+  
+
+   # ------------------------------
+   # Thea: 2, Ase: 1
+  - if (({thea_count} == 2) && ({asellus_count} == 1)):
+    - choice:
+      - "I'll try talking to Thea again.":
+        - scene: postRoundThea
+      - "Let's talk to Asellus again.":
+        - scene: roundTwoAsellus
+   # ------------------------------
+  
+   # ------------------------------
+   # Thea: 2, Asellus: 2
+  - if (({thea_count} == 2) && ({asellus_count} == 2)):
+    # Teddie has been talked to
+    - if ({teddie_count} == 2):
+      - choice:
+        - "I'll try talking to Thea again.":
+          - scene: postRoundThea
+        - "I'll try talking to Asellus again":
+          - scene: postRoundAsellus
+        - "Maybe I should talk to Teddie again...":
+          - scene: postRoundTeddie
+    - else:
+      - choice:
+        - "I'll try talking to Thea again.":
+          - scene: postRoundThea
+        - "I'll try talking to Asellus again":
+          - scene: postRoundAsellus
 
 
 roundOneThea:
