@@ -135,7 +135,8 @@ startTimeMachine:
       - scene: roundOneAsellus
     - "Talk to Thea, the futuristic robot lady.":
       - scene: roundOneThea
-  
+
+
 nextSelection: 
   # Come back to this scene once you're done with one dialogue scene with Thea or Asellus
 
@@ -469,12 +470,15 @@ confessionTwoThea:
 
   
 roundOneTeddie:
-  # ------------------------------
-  # Updating Teddie counter
-  - var teddie_count: 1
-  # ------------------------------
-
-  - text: You decide that this is all kind of overwhelming, and you think you should just talk to Teddie for now.
+  - choice:
+    - "Confess to Teddy":
+      - scene: confessionZeroTeddy
+    - "Talk to Teddy":
+      - text: You decide that this is all kind of overwhelming, and you think you should just talk to Teddie for now.
+    - "Start the time machine.":
+      - pro says: "Nevermind, I think it's time to start up this time machine..."
+      - ted says: "Alright, let's do it!"
+      - scene: startTimeMachine
   - pro says: Ugh, the assignment due date is so close... And I feel like we're really behind on the work...
   - pro says: And now there's about to be two people from across the space-time continuum in your backyard, Teddie...
   - pro says: Which might not be such a good idea!
@@ -567,41 +571,71 @@ roundOneTeddie:
 
       - ted says: It's up to you.
       - ted says: I'm happy we're having a little chat!
+
+  # ------------------------------
+  # Updating Teddie counter
+  - var teddie_count: 1
+  # ------------------------------
   - choice:
     - "Confess to Teddie":
-      - scene: confessionZeroTeddy
+      - scene: confessionOneTeddy
     - "Continue to talk to Teddie":
       - scene: roundTwoTeddie
+    - "Start the time machine.":
+      - pro says: "Ok, now I'm curious about this time machine."
+      - pro says: "What say we see what it's all about."
+      - ted says: "I'm excited! Let's see how it goes."
+      - scene: startTimeMachine
 
 
 roundTwoTeddie:
+
+  - choice:
+    - "Confess your love to Teddy.":
+      - scene: confessionOneTwoTeddy
+    - "Continue to talk to Teddy.":
+      - text: You decide to continue to talk to Teddie.
+    - "Start the time machine.":
+      - pro says: "Okay, I think it's time to start up this time machine..."
+      - ted says: "Alright, let's do it!"
+      - scene: startTimeMachine
+
+  - "Anything fun going on in the rest of the day?":
+    
+  - ted says: Besides the two wormhole-enabling time machines we might be about to turn on to trans-dimensionally relocate two time-struck individuals?
+  - ted says: No, nothing much.
+
+  - pro says: (You two laugh.)
+
+  - pro says: Maybe we could play some of that new (italic)Sideshow Fighter(end) everyone's buzzing about.
+
+  - pro says: Yeah, that sounds good. I can't believe they added E-40 as a playable character.
+  - ted says: Wait, like the East Bay rapper?
+  - pro says: Yeah!
+  - pro says: He's a stance character that goes between “Nope” and “Yup” to absorb and dish out stored damage.
+  - pro says: His playstyle is super cool, but they did a lot of work on all the other fighters too, and the game is getting rave reviews.
+  - pro says: Plus, E-40 is just a bomb-ass musician anyway. 
+  - ted says: Yeah, I need to listen to him more.
+  - ted says: ...Or we could just play Quake.
+  - pro says: Quaaake!!
+  - ted says: Quake.
+  - pro says: Quake!
+  - pro says: Quake!
+  - pro says: (You think it's nice to have friends who like the same things as you.)
+  - pro says: (American loneliness epidemic? Couldn't be you, you think with a selfish smirk.)
+
   # ------------------------------
   # Updating Teddie count here
   - var teddie_count: 2
   # ------------------------------
-  - "Anything fun going on in the rest of the day?":
-    
-    - ted says: Besides the two wormhole-enabling time machines we might be about to turn on to trans-dimensionally relocate two time-struck individuals?
-    - ted says: No, nothing much.
 
-    - pro says: (You two laugh.)
-
-    - pro says: Maybe we could play some of that new (italic)Sideshow Fighter(end) everyone's buzzing about.
-
-    - pro says: Yeah, that sounds good. I can't believe they added E-40 as a playable character.
-    - ted says: Wait, like the East Bay rapper?
-    - pro says: Yeah!
-    - pro says: He's a stance character that goes between “Nope” and “Yup” to absorb and dish out stored damage.
-    - pro says: His playstyle is super cool, but they did a lot of work on all the other fighters too, and the game is getting rave reviews.
-    - pro says: Plus, E-40 is just a bomb-ass musician anyway. 
-    - ted says: Yeah, I need to listen to him more.
-    - ted says: ...Or we could just play Quake.
-    - pro says: Quaaake!!
-    - ted says: Quake.
-    - pro says: Quake!
-    - pro says: Quake!
-    - pro says: (You think it's nice to have friends who like the same things as you.)
-    - pro says: (American loneliness epidemic? Couldn't be you, you think with a selfish smirk.)
+  choice:
+    - "Confess to Teddy.":
+      - scene: confessionOneTwoTeddy
+    - "Start time machine.":
+      - pro says: "Ok, I've delayed enough, let's get this time machine going."
+      - ted says: "Sounds good, let's get this baby up and running!"
+      - scene: startTimeMachine
 
 
 confessionZeroTeddy:
