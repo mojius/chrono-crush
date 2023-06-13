@@ -199,6 +199,7 @@ roundOneThea:
         - ase says: (Could she be a Platonic ideal of woman..?)
         - ted says: (italic)*facepalm*(end)
       # Go to round 2 with robot spoken to one time.
+        - scene:
       - "What's the future like?":
         - bot says: Well, the far future is exceptional for the success and well-being of peoplekind.
         - bot says: We no longer use the legacy phrase "humankind."
