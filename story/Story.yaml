@@ -469,7 +469,11 @@ confessionTwoThea:
 
   
 roundOneTeddie:
-  - var thea_count: 1
+  # ------------------------------
+  # Updating Teddie counter
+  - var teddie_count: 1
+  # ------------------------------
+
   - text: You decide that this is all kind of overwhelming, and you think you should just talk to Teddie for now.
   - pro says: Ugh, the assignment due date is so close... And I feel like we're really behind on the work...
   - pro says: And now there's about to be two people from across the space-time continuum in your backyard, Teddie...
@@ -698,9 +702,16 @@ confessionThreeTeddy:
 
 
 roundOneAsellus:
-
+  # ------------------------------
+  # Updating Asellus counter 
   - var asellus_count: 1
-  - pro says: (You decide to talk to Asellus.)
+  # ------------------------------
+  - choice: 
+      - "Confess your love to Asellus.":
+        - text: You decide to confess to Thea.
+        - scene: confessionOneThea
+      - "Talk to Asellus.":
+        - text: You decide to talk to Asellus.
 
   - ase says: So, where am I? What are these strange constructions?
   - ase says: What temples are these before me, and what strange dry ship's hull do I stand in?
@@ -878,8 +889,10 @@ roundOneAsellus:
 
 
 roundTwoAsellus:
-
+  # ------------------------------
+  # Updating Asellus Counter
   - var asellus_count: 2
+  # ------------------------------
   - ted says: What else do you want to ask Asellus?
 
   - choice:
