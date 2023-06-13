@@ -109,15 +109,20 @@ start:
 startTimeMachine:
   - var time_machine: true
   - show room: WITH FADE
+  - show ted: WITH FADE
   - text: You watch as Teddie goes over to the two machines, tinkering with them and turning them on.
   - text: Before long, two giant and imposing portals open up! From the left portal emerges a stout figure from the ether...
   - wait: 1000
   # - show: ase WITH FADE
   - ase says: Αυτός είναι ο Άδης
   - pro says: D-did we summon someone from Ancient Greece?
-  - ted says: W-wait! I can use an auto-translator on him?
+  - ted says confused: W-wait! I can use an auto-translator on him, maybe?
+  - hide ALL: WITH FADE
+  - wait: 2000
+  - show room: WITH FADE
+  - show ase: WITH FADE
   - ase says: Is this a vision?
-  - ted says: N-no, it's not. Welcome to 2023, sir! What's your name?
+  - ted says happy: N-no, it's not. Welcome to 2023, sir! What's your name?
   - ase says: Two Gauls, maybe? But such strange and colorful apparel...
   - ase says: Nobles, perhaps?
   - ase says: Then in foreign courts I shall espouse domestic courtesy.
