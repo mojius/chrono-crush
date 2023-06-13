@@ -46,10 +46,14 @@
 
 start:
   - var name: Kris
+  # ------------------------------
+  # Our variables for the story
+  # ------------------------------
   - var teddie_count: 0
   - var thea_count: 0
   - var asellus_count: 0
   - var time_machine: false
+  # ------------------------------
   - show room: WITH FADE CONTINUE
   - pro says: My name is {name}. I'm a junior in college.
   - pro says: I'm interested in games and computers, but my best friend and I have a whopper of an assignment coming up.
@@ -73,9 +77,13 @@ start:
   - ted says: Are we gonna start these time machines, or what?
   - pro says: ...Oh, oh yeah, um...
   - choice:
+    # ------------------------------
+    # Start time machine
     - "Let 'er rip!!":
       - scene: startTimeMachine
 
+    # ------------------------------
+    # Talk to Teddie
     - "On second thought...":
       - pro says: Honestly, Teddie...
       - pro says: Isn't this all a little much?
@@ -130,6 +138,8 @@ startTimeMachine:
 
 
 roundOneThea:
+    # ------------------------------
+    # Updating Thea talk count here.
     - var thea_count: "{thea_count} + 1"
     - pro says: Thea, I think I'm going to talk to you first.
     - pro says: Make an argument for why we should look to the future for the success of humanity.
