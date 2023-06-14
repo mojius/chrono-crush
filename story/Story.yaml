@@ -8,12 +8,12 @@ start:
   - var asellus_count: 0
   - var time_machine: false
   # ------------------------------
-  - show room: WITH FADE CONTINUE
+  - show backyard: WITH FADE CONTINUE
   - text says: What is your name?
   - call text_input: var player
   
   # For debugging. REMOVE WHEN DONE!!
-  # - scene: confessionThreeTeddy
+  - scene: roundOneAsellus
   #- scene: confessionTwoAsellus
 
   - pro says: My name is {player}. I'm a junior in college.
@@ -806,23 +806,25 @@ roundOneAsellus:
       - "Talk to Asellus.":
         - text: You decide to talk to Asellus.
 
-  - ase says: So, where am I? What are these strange constructions?
+  - show ase: AT LEFT WITH FADE
+  - ase says normal: So, where am I? What are these strange constructions?
   - ase says: What temples are these before me, and what strange dry ship's hull do I stand in?
   - ase says: What strange forms litter the grass?
   - ase says: A forge? Old dye-marked weapons of war? A wide water-barrel?
-  - ase says: And an unmoving beast!
+  - ase says talking: And an unmoving beast!
 
-  - ted says: Yeah, you just named the grill, the Super Soakers, the jacuzzi, and the flamingo.
+  - show ted: AT RIGHT WITH FADE
+  - ted says happy: Yeah, you just named the grill, the Super Soakers, the jacuzzi, and the flamingo.
 
   - ted says: Welcome! 
-  - ted says: You come from thousands of years in the future from your time, in a land called America.
+  - ted says glad: You come from thousands of years in the future from your time, in a land called America.
 
-  - ase says: Do they believe in the Pantheon?
+  - ase says talking: Do they believe in the Pantheon?
 
-  - ted says: Uh, no, they believe in a lot of different things.
-  - ted says: When the country was founded, most people believed in one god...
+  - ted says surprised: Uh, no, they believe in a lot of different things.
+  - ted says normal: When the country was founded, most people believed in one god...
 
-  - ase says: Like foolish Socrates. Pah! These people must be barbarians.
+  - ase says normal: Like foolish Socrates. Pah! These people must be barbarians.
   - ase says: The Pantheon are the ideals of my people distilled into a form recognizable by mortal humans. 
   - ase says: They carry virtues the Persians would never understand!
   - ase says: First, Zeus, the father of the Olympians...
@@ -832,32 +834,40 @@ roundOneAsellus:
   - pro says: (All of it reflects a sensitivity you never knew was carried by the Ancient Greeks.)
   - pro says: (But soon, he is interrupted by another voice.)
 
-  - bot says: But Asellus...
+  - hide ted:
+  - show bot: AT RIGHT WITH MOVE
+  - bot says normal: But Asellus...
   - bot says: Just as a thought experiment, can you prove that the gods of your Pantheon exist?
 
-  - ase says: Am I not in a vision granted by them now? That is proof enough.
+  - ase says normal: Am I not in a vision granted by them now? That is proof enough.
 
+  - hide bot:
+  - show ted: AT RIGHT WITH FADE
   - ted says: Actually, Asellus, you've been transported through the space-time continuum via a trans-temporal wormhole.
 
-  - ase says: So moved through the earth via giant worms to different times and worlds. 
+  - ase says bored: So moved through the earth via giant worms to different times and worlds. 
   - ted says: (Not exactly...)
   - ase says: Is this Nysa? Themiskyra, maybe? Or just the work of Khronos.
 
+  - hide ted:
+  - show bot: AT RIGHT WITH FADE
   - bot says: So you can't (italic)really(end) prove the existence of these gods, can you, Asellus?
 
-  - ase says: Or any land's gods, for that matter?
+  - ase says talking: Or any land's gods, for that matter?
 
-  - ase says: "..."
+  - ase says bored: "..."
 
   - ase says: Is the world more godly now, more than it was in my days?
 
-  - ted says: Nope!
+  - hide bot:
+  - show ted: AT RIGHT WITH FADE
+  - ted says angry: Nope!
 
-  - ase says: Then in passing, i cannot prove their existence.
+  - ase says bored: Then in passing, I cannot prove their existence.
   - ase says: For all the pursuit of truth in my tie, I cannot say I am a godly enough person either to recognize signs of the divine.
   - ase says: But this warrants great discussion.
 
-  - ase says: And, since I am in the company of strangers...
+  - ase says normal: And, since I am in the company of strangers...
   - ase says: I must admit that Socrates' dialogues have shaken my faith in the natural order.
   - ase says: Perhaps I am the wrong person to ask about the past.
 
@@ -865,16 +875,16 @@ roundOneAsellus:
 
   - ted says: Oh, bullcrap!
   - ted says: I'm sure you have a bunch of stuff to teach the contemporary world, Asellus!
-  - ted says: ...If at least some thoughts to help with our group project.
+  - ted says normal: ...If at least some thoughts to help with our group project.
   - ted says: What do you want to ask him, {player}?
 
   - choice:
     - "Why are you so buff?":
       - pro says: Asellus, why are you so buff?
-      - ase says: "..."
+      - ase says bored: "..."
       - ase says: I am a freed chattel slave once in the service of an Athenian noble couple.
       - ase says: I am now a man of words and ideas, who enjoys gymnastics to replace the hard labor I was accustomed to.
-      - ted says: Okay... So how do you make a living?
+      - ted says confused: Okay... So how do you make a living?
       
       - ase says: ...Well!
       - ase says: I am still technically in service to the couple.
@@ -882,31 +892,35 @@ roundOneAsellus:
 
       - ted says: Wait, so like, a fuckboy?
 
-      - ase says: A (italic)what???(end)
+      - ase says normal: A (italic)what???(end)
 
       - ase says: I am not some low-class (italic)pornai [lowest-class prostitute](end)!
       - ase says: I am a high-class servant to caters to the whims of my mistress.
 
-      - ted says: ...MISTRESS?
+      - ted says angry: ...MISTRESS?
 
+      - hide ted:
+      - show bot: AT RIGHT WITH FADE
       - bot says: This is a reminder that prostitution was legal in ancient Greece.
       - bot says: Asellus' situation, though uncommon, was not entirely unusual given the circumstances.
 
+      - hide bot:
+      - show ted: AT RIGHT WITH FADE
       - ted says: Okay, so, the mistress thing. What do you do?
 
-      - ase says: Well.
+      - ase says bored: Well.
       - ase says: I allow myself to be belittled and teased by my mistress for her pleasure...
       - ase says: ...and for my daily wage and rooming.
 
-      - ted says: So a simp, basically.
+      - ted says confused: So a simp, basically.
 
       - ase says: "..."
       - ase says: What's a simp?
-      - ted says: It's basically someone, usually a guy...
+      - ted says normal: It's basically someone, usually a guy...
       - ted says: ...Who pines for (usually) a girl who's not interested or treats him badly.
 
       - ase says: Hmph.
-      - ase says: Pah!
+      - ase says normal: Pah!
 
       - ase says: If that makes a simp, I make a simp of myself.
       - ase says: But allow me to answer Socratically, too.
@@ -917,7 +931,7 @@ roundOneAsellus:
 
       - pro says: "..."
 
-      - ted says: "..."
+      - ted says confused: "..."
 
       - bot says: (Somehow, Thea is beaming.)
 
@@ -928,41 +942,41 @@ roundOneAsellus:
       - bot says: Asellus, in Athens that may be strange, but in this time it's become normal.
 
       - ase says: Is it..?
-      - ase says: Good tidings.  
+      - ase says normal: Good tidings.  
 
       - scene: nextSelection
 
     - "Make an argument for the past!":
       - pro says: Asellus, explain why we might look to the past for guideance.
-      - ase says: Well.
+      - ase says bored: Well.
       - ase says: Do all men not consult the gods, who are of the past, to guide them?
       - ase says: To find out what is godly?
 
-      - ted says: Not really...
+      - ted says normal: Not really...
       - ase says: Oh.
       - ase says: Well then, I cannot tell you.
       
-      - ted says: It's a bit of a silly question, because there wasn't much recorded civilization (italic)before(end) ancient Greece.
+      - ted says confused: It's a bit of a silly question, because there wasn't much recorded civilization (italic)before(end) ancient Greece.
 
       - ted says: So then, why not try to justify the virtues of your time?
 
-      - ase says: Even that I cannot do.
+      - ase says normal: Even that I cannot do.
       - text: (He rubs his temples.)
       - ase says: These wars between Athens and Sparta...
       - ase says: I have seen soldiers return cart-bound bloody and slaughtered.
       - ase says: Women in the streets shrieking for their lost husbands.
       - ase says: I even once saw an entire (italic)polis(end) burn.
 
-      - ted says: Wow! did you serve?
+      - ted says surprised: Wow! Did you serve?
       - ase says: Oh, no, I...
       - ase says: I'm protected by the noble couple I live with.
 
-      - ted says: Hm.
+      - ted says angry: Hm.
 
       - ase says: But, is there hubris in the modern world?
 
-      - ted says: I mean, it depends... But yeah, there's kind of a lot.
-      - ase says: When did people stop being godly?
+      - ted says normal: I mean, it depends... But yeah, there's kind of a lot.
+      - ase says talking: When did people stop being godly?
 
       - ted says: (italic)Wellllll...(end)
       - ted says: It was only in the last hundred years, but things are changing pretty fast in general.
@@ -973,8 +987,10 @@ roundOneAsellus:
 
       - ase says: If we do not establish a society that gives itself the time to weigh its successes and mistakes, then it is doomed to blind missteps forever.
 
-      - ted says: Sheesh!
+      - ted says surprised: Sheesh!
 
+      - hide ted:
+      - show bot: AT RIGHT WITH FADE
       - bot says: That was very well-spoken of you, Asellus, I enjoyed your oration.
       - ase says: Thank you, statue!
 
