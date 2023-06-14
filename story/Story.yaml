@@ -13,7 +13,7 @@ start:
   - call text_input: var player
   
   # For debugging. REMOVE WHEN DONE!!
-  - scene: roundOneAsellus
+  # - scene: roundOneAsellus
   #- scene: confessionTwoAsellus
 
   - pro says: My name is {player}. I'm a junior in college.
