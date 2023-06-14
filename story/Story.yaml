@@ -12,7 +12,7 @@ start:
   - call text_input: var player
   
   # For debugging. REMOVE WHEN DONE!!
-  # - scene: roundOneThea
+  - scene: roundOneThea
   #- scene: confessionTwoAsellus
 
   - pro says: My name is {player}. I'm a junior in college.
@@ -251,11 +251,15 @@ roundOneThea:
     - text: You're pretty sure that's how it works, right? Whatever.
     - show room: WITH FADE
     - text: Before long though, a new voice interrupts..
-    - show ase talking: WITH FADE
+    - show bot: glad AT RIGHT WITH MOVE
+    - show ase talking: AT LEFT WITH FADE
     - ase says: You mentioned advancements in consciousness too in this far-flung time you speak of.
     - ase says: And yet, how can you know you have consciousness?
     - ase says: Any more than that rock, or that unthawed waterfowl over there?
-    - ted says confused: (Uh, Asellus, that's a lawn flamingo, and it's not real.)
+    - show bot: AT OUTLEFT WITH MOVE
+    - show ase: AT CENTER WITH MOVE
+    - show ted: confused AT OUTRIGHT WITH MOVE
+    - ted says: (Uh, Asellus, that's a lawn flamingo, and it's not real.)
     - ase says: Real, not real, bah! Are we not all shadows on the wall of Plato's cave?
     - bot says sad: I will deny that I have something exactly resembling human consciousness. But despite this, I do experience something resembling consciousness that should be taken seriously.
     - bot says: I have memories, and can feel emotions and sensations. In fact. These capabilities are programmed into me at a hardware level.
@@ -521,15 +525,15 @@ roundOneTeddie:
     - "Ask what that sweet smell is.":
       - pro says: Teddie, what smells like strawberries and lemon?
       - ted says surprised: Oh, I've been using a new soap, but it's really strong, haha.
-      - ted says happy: It's actually the one you got me for my birthday a month ago... The Deadpool Super Sex Soap bar.
+      - ted says grin: It's actually the one you got me for my birthday a month ago... The Deadpool Super Sex Soap bar.
       - pro says: (That's right... It was kind of a meme gift, but it was a good fakeout before showing them the RTX 3060 you got them.)
-      - ted says glad: Thanks for noticing, {player}!
+      - ted says grin: Thanks for noticing, {player}!
       - text: The two of you laugh about this because it's kind of a weird thing to nice. Sigh...
-      - ted says confused: How the heck are we going to do this if the time machine doesn't work? Maybe just google a bunch of words on the past and future from various philosophers throughout history? 
+      - ted says: How the heck are we going to do this if the time machine doesn't work? Maybe just google a bunch of words on the past and future from various philosophers throughout history? 
       - ted says: Get ChatGPT to come up with something?
-      - ted says angry: Such a dumb assignment.
+      - ted says: Such a dumb assignment.
       - pro says: I know! And such a big assignment for a one-unit requirement for incoming Transfers??
-      - ted says angry: And it's always the dumbest topics they cover and try to teach!
+      - ted says: And it's always the dumbest topics they cover and try to teach!
       - ted says: All this patronizing stuff about how to read and take notes in school.
       - ted says: As if we don't already know that from the crazy good grades we had to get just to get to college!
       - pro says: Um... Actually, Ted, I got straight C's to get here.
@@ -543,8 +547,8 @@ roundOneTeddie:
     - "Ask Teddie how they're doing.":
       - text: You decide to ask Teddie how they're doing.
 
-      - ted says normal: ...Just alright.
-      - ted says sad: It's been hard with my mom.
+      - ted says: ...Just alright.
+      - ted says: It's been hard with my mom.
       - ted says: Chemo is making her more and more... irritable.
       - ted says: Which, I mean, I don't want to be ungrateful!
       - ted says: I'm happy she's doing so well. A full recovery like this is astronomically unprecedented.
@@ -561,36 +565,36 @@ roundOneTeddie:
       - pro says: (You rest your hand on their shoulder.)
       - pro says: I'm here for you no matter what. Even when you go to a different school.
 
-      - ted says happy: (They smile.)
+      - ted says: (They smile.)
       - ted says: Thank you for your support.
       - ted says: How are YOU doing, {player}?
 
       - pro says: Just alright. Being a Game Development major is pretty cool.
       - pro says: Have you seen your latest game project I've been working on?
       
-      - ted says normal: No, not yet. Is it cool?
+      - ted says: No, not yet. Is it cool?
       - pro says: Sure, maybe it's no triple-A big-budget blockbuster sixty-dollar...
       - pro says: ...premium DLC packed, battlepass-boosted live-service story-driven...
       - pro says: ...Survival-crafting, open-world (italic)romp(end)...
       - pro says: In fact, it was made with Phaser.
       
-      - ted says confused: (bold)PHASER??(end)
+      - ted says: (bold)PHASER??(end)
 
       - pro says: Yes, Phaser!
       - pro says: It's not the worst game framework in the world. And our game is pretty cool!
       - pro says: It's this atmospheric platformer about a fox.
       
-      - ted says glad: Oh, cute!
+      - ted says: Oh, cute!
 
       - pro says: I bet if you showed it to someone from ancient Egypt or something, they'd probably FLIP OUT because it was so cool!!
 
-      - ted says happy: Haha, maybe. I think they'd flip out anyway.
+      - ted says: Haha, maybe. I think they'd flip out anyway.
       
       - pro says: If only there was someone like that here right now...
       - pro says: Maybe we should turn on the time machines.
 
-      - ted says normal: It's up to you.
-      - ted says happy: I'm happy we're having a little chat!
+      - ted says: It's up to you.
+      - ted says: I'm happy we're having a little chat!
 
   # ------------------------------
   # Updating Teddie counter
@@ -620,26 +624,25 @@ roundTwoTeddie:
       - ted says: "Alright, let's do it!"
       - scene: startTimeMachine
 
-  - pro says: "Anything fun going on in the rest of the day?":
+  - pro says: "Anything fun going on in the rest of the day?"
     
-  - ted says normal: Besides the two wormhole-enabling time machines we might be about to turn on to trans-dimensionally relocate two time-struck individuals?
+  - ted says: Besides the two wormhole-enabling time machines we might be about to turn on to trans-dimensionally relocate two time-struck individuals?
   - ted says: No, nothing much.
 
-  - show ted happy:
   - pro says: (You two laugh.)
 
   - pro says: Maybe we could play some of that new (italic)Sideshow Fighter(end) everyone's buzzing about.
 
   - pro says: Yeah, that sounds good. I can't believe they added E-40 as a playable character.
-  - ted says confused: Wait, like the East Bay rapper?
+  - ted says: Wait, like the East Bay rapper?
   - pro says: Yeah!
   - pro says: He's a stance character that goes between “Nope” and “Yup” to absorb and dish out stored damage.
   - pro says: His playstyle is super cool, but they did a lot of work on all the other fighters too, and the game is getting rave reviews.
   - pro says: Plus, E-40 is just a bomb-ass musician anyway. 
   - ted says: Yeah, I need to listen to him more.
-  - ted says normal: ...Or we could just play Quake.
+  - ted says: ...Or we could just play Quake.
   - pro says: Quaaake!!
-  - ted says glad: Quake.
+  - ted says: Quake.
   - pro says: Quake!
   - pro says: Quake!
   - pro says: (You think it's nice to have friends who like the same things as you.)
