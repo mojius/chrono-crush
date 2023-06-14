@@ -3,6 +3,7 @@ backgrounds:
   room: assets/backgrounds/room_day.jpg
   room_night: assets/backgrounds/room_night.jpg
   room_night_light: assets/backgrounds/room_night_light.jpg
+  backyard: assets/backgrounds/background.png
 
 characters:
   pro:
