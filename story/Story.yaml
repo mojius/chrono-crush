@@ -12,7 +12,7 @@ start:
   - call text_input: var player
   
   # For debugging. REMOVE WHEN DONE!!
-  - scene: roundOneThea
+  - scene: confessionTwoAsellus
 
   - pro says: My name is {player}. I'm a junior in college.
   - pro says: I'm interested in games and computers, but my best friend and I have a whopper of an assignment coming up.
@@ -1168,7 +1168,7 @@ postRoundThea:
       - scene: confessionTwoThea
     - "Talk to Thea":
       # Fill in dialogue
-      - "There is no other information I'm currently curious about."
+      - bot says: "There is no other information I'm currently curious about."
       - scene: postRoundThea
     - "Nevermind, it's nothing":
       - scene: nextSelection
@@ -1181,7 +1181,7 @@ postRoundAsellus:
       - scene: confessionTwoAsellus
     - "Talk to Asellus":
       # Fill in dialogue
-      - "I have nothing to discuss anymore."
+      - ase says: "I have nothing to discuss anymore."
       - scene: postRoundAsellus
     - "Nevermind, it's nothing":
       - scene: nextSelection
@@ -1201,8 +1201,7 @@ postRoundTeddy:
 
 
 endGame:
-  - text says: Thank you for playing!
-  - hide all:
+  - hide ALL:
   - effect ROLLINGCREDITS:
     endGame: true
     text:
