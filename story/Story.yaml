@@ -2,6 +2,7 @@ start:
   # ------------------------------
   # Our variables for the story
   # ------------------------------
+  - play morningBGM:
   - var teddie_count: 0
   - var thea_count: 0
   - var asellus_count: 0
@@ -12,7 +13,7 @@ start:
   - call text_input: var player
   
   # For debugging. REMOVE WHEN DONE!!
-  - scene: confessionThreeTeddy
+  # - scene: confessionThreeTeddy
   #- scene: confessionTwoAsellus
 
   - pro says: My name is {player}. I'm a junior in college.
