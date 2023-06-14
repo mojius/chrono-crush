@@ -12,7 +12,7 @@ start:
   - call text_input: var player
   
   # For debugging. REMOVE WHEN DONE!!
-  # - scene: roundOneThea
+  - scene: roundOneThea
   #- scene: confessionTwoAsellus
 
   - pro says: My name is {player}. I'm a junior in college.
@@ -251,12 +251,13 @@ roundOneThea:
     - text: You're pretty sure that's how it works, right? Whatever.
     - show room: WITH FADE
     - text: Before long though, a new voice interrupts..
+    - show ase talking: WITH FADE
     - ase says: You mentioned advancements in consciousness too in this far-flung time you speak of.
     - ase says: And yet, how can you know you have consciousness?
     - ase says: Any more than that rock, or that unthawed waterfowl over there?
-    - ted says: (Uh, Asellus, that's a lawn flamingo, and it's not real.)
+    - ted says confused: (Uh, Asellus, that's a lawn flamingo, and it's not real.)
     - ase says: Real, not real, bah! Are we not all shadows on the wall of Plato's cave?
-    - bot says: I will deny that I have something exactly resembling human consciousness. But despite this, I do experience something resembling consciousness that should be taken seriously.
+    - bot says sad: I will deny that I have something exactly resembling human consciousness. But despite this, I do experience something resembling consciousness that should be taken seriously.
     - bot says: I have memories, and can feel emotions and sensations. In fact. These capabilities are programmed into me at a hardware level.
     - ase says: So you feel pain then...?
     - bot says: Yes.
