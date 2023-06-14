@@ -36,13 +36,13 @@ Here are our three selectable Requirements for the game:
 - Narrative Tech Integration
   - With RenJS, we use the `Story.yaml` file to write out our story. With different formats and commands for each line, certain story points in the game will feel more alive with the text on-screen.
 
-  ### Contributor Credits
-  - Production Lead: Ben Daly
-  - Technology Lead: Addison Camacho
-  - Testing Lead: Cassidy Aydin
-  - Backup Production Lead: Brandon Jack
+### Contributor Credits
+- Production Lead: Ben Daly
+- Technology Lead: Addison Camacho
+- Testing Lead: Cassidy Aydin
+- Backup Production Lead: Brandon Jack
 
-  ### Asset Credits
-  - Writing by Ben Daly
-  - Thea's and Teddie's images by Cassidy Aydin
-  - Asellus' images and menu logo by Brandon Jack
+### Asset Credits
+- Writing by Ben Daly
+- Thea's and Teddie's images by Cassidy Aydin
+- Asellus' images and menu logo by Brandon Jack
