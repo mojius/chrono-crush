@@ -12,7 +12,7 @@ start:
   - call text_input: var player
   
   # For debugging. REMOVE WHEN DONE!!
-  # - scene: roundOneThea
+  - scene: confessionThreeTeddy
   #- scene: confessionTwoAsellus
 
   - pro says: My name is {player}. I'm a junior in college.
@@ -500,7 +500,7 @@ roundOneTeddie:
       - text: You decide that this is all kind of overwhelming, and you think you should just talk to Teddie for now.
     - "Start the time machine.":
       - pro says: "Nevermind, I think it's time to start up this time machine..."
-      - ted says: "Alright, let's do it!"
+      - ted says happy: "Alright, let's do it!"
       - scene: startTimeMachine
   - show ted normal:
   - pro says: Ugh, the assignment due date is so close... And I feel like we're really behind on the work...
@@ -602,7 +602,7 @@ roundOneTeddie:
   # ------------------------------
   - choice:
     - "Confess to Teddie":
-      - scene: confessionOneTeddy
+      - scene: confessionOneTwoTeddy
     - "Continue to talk to Teddie":
       - scene: roundTwoTeddie
     - "Start the time machine.":
@@ -615,21 +615,20 @@ roundOneTeddie:
 roundTwoTeddie:
 
   - choice:
-    - "Confess your love to Teddy.":
+    - "Confess your love to Teddie.":
       - scene: confessionOneTwoTeddy
-    - "Continue to talk to Teddy.":
+    - "Continue to talk to Teddie.":
       - text: You decide to continue to talk to Teddie.
     - "Start the time machine.":
       - pro says: "Okay, I think it's time to start up this time machine..."
-      - ted says: "Alright, let's do it!"
+      - ted says happy: "Alright, let's do it!"
       - scene: startTimeMachine
 
   - pro says: "Anything fun going on in the rest of the day?"
     
   - ted says normal: Besides the two wormhole-enabling time machines we might be about to turn on to trans-dimensionally relocate two time-struck individuals?
-  - ted says: No, nothing much.
+  - ted says happy: No, nothing much.
 
-  - show ted happy:
   - pro says: (You two laugh.)
 
   - pro says: Maybe we could play some of that new (italic)Sideshow Fighter(end) everyone's buzzing about.
@@ -655,7 +654,7 @@ roundTwoTeddie:
   # ------------------------------
 
   - choice:
-    - "Confess to Teddy.":
+    - "Confess to Teddie.":
       - scene: confessionOneTwoTeddy
     - "Start time machine.":
       - pro says: "Ok, I've delayed enough, let's get this time machine going."
@@ -693,7 +692,9 @@ confessionOneTwoTeddy:
   - pro says: And, because of that... I think in the last year or two...
   - pro says: ...I've seen you as a little bit more than that.
 
-  - show ted sad:
+  - ted says sad: ...
+  - ted says sad: I see... 
+
   - pro says: (But more than that, you're too scared to say. You see a wave of dread and fear wash over Teddie's face, which makes you reflexively panic.)
   - pro says: No, oh my god, I'm sorry I brought it up, I'm sorry.
 
@@ -744,7 +745,7 @@ confessionThreeTeddy:
   - pro says: Yeah.
   - pro says: I love you, Teddie. Stupid as it is to say.
 
-  - show ted embarrassed:
+  - ted says embarrassed: '!!!'
   - text: (Teddie is FLUSHED with emotion – embarrassment, love, surprise – what is it?)
   - text: (But before the two of you can say anything, Asellus speaks.)
 
@@ -753,6 +754,7 @@ confessionThreeTeddy:
   - ase says: I admit I mistook the two of you for young lovers, the way the two of you seem to have such a deep care for each other. 
   - ase says: There is (italic)agape(end) between you. A deep bond between souls, even if unseen by the eye.
 
+  - hide ase: WITH FADE
   - show bot normal: WITH FADE
   - bot says: I can supplement Asellus' wise words.
   - bot says: Without putting too much pressure on the decisions of a typically delicate human relationship...
@@ -760,15 +762,17 @@ confessionThreeTeddy:
   - bot says: And to make no attempt at such a connection would be a grave mistake.
 
   - hide bot: WITH FADE
-  - ted says: "..."
+  - show ted:
+  - ted says embarrassed: "..."
   - ted says: I didn't need those guys to say anything.
-  - ted says: I love you, {player}.
+  - ted says happy: I love you, {player}.
 
   - text: (Teddie’s lips curl into a wry, embarrassed grin as they embrace you, to the celebration of the two historical figures in front of you!!)
 
   # scene change
   - hide ted:
-  - pro says: In the end, the assignment was a cinch, the odd couple of out-of-time guests providing more than enough wisdom for ten group presentations. The two of you got extra credit with very kind words from the class and the professor.
+  - pro says: In the end, the assignment was a cinch, the odd couple of out-of-time guests providing more than enough wisdom for ten group presentations.
+  - pro says: The two of you got extra credit with very kind words from the class and the professor.
   - pro says: A year later, you are commuting up to Stanford every weekend for some quality time with Teddie. This weekend, she’s come down to you.
   - pro says: As you look out over the veranda, sitting together in your little swinging bench, holding hands, you think…
   - pro says: We can learn fantastic lessons from the cutting edge, and the distant past. 
@@ -1217,9 +1221,9 @@ postRoundAsellus:
 postRoundTeddy:
   - text says: "What did you want to talk about?"
   - choice:
-    - "Confess to Teddy":
+    - "Confess to Teddie":
       - scene: confessionThreeTeddy
-    - "Talk to Teddy":
+    - "Talk to Teddie":
       # Fill in dialogue
       - ted says: "Shouldn't you be talking to our wonderful guests?"
       - scene: postRoundTeddy
