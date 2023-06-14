@@ -296,7 +296,7 @@ assets:
   images:
     loaderbackground:
       name: loaderbackground
-      fileName: loaderloaderbackground.png
+      fileName: ChronoCrushTitle.png
     asset16:
       name: asset16
       fileName: saveloadasset16.png
