@@ -3,7 +3,7 @@ positions:
     x: -133
     y: 600 #The y should be at the bottom of the screen
   LEFT: 
-    x: 133
+    x: 233
     y: 600
   DEFAULT:
     x: 400
@@ -12,7 +12,7 @@ positions:
     x: 400
     y: 600
   RIGHT: 
-    x: 666
+    x: 566
     y: 600
   OUTRIGHT: #Outside of the screen, right side
     x: 933

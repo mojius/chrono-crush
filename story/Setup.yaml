@@ -24,6 +24,12 @@ characters:
       displayName: Asellus
       speechColour: "#000000"
       color: "0000FF"
+      looks:
+        normal: assets/characters/asellus_awkward.png
+        happy: assets/characters/asellusgoofysmile.png
+        bored: assets/characters/asellus_uninterested.png
+        talking: assets/characters/asellus_talking.png
+        embarrassed: assets/characters/asellus_blushing.png
   bot:
     displayName: Thea
     speechColour: "#000000"
