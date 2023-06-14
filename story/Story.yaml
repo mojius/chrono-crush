@@ -251,15 +251,11 @@ roundOneThea:
     - text: You're pretty sure that's how it works, right? Whatever.
     - show room: WITH FADE
     - text: Before long though, a new voice interrupts..
-    - show bot: glad AT RIGHT WITH MOVE
-    - show ase talking: AT LEFT WITH FADE
+    - show ase talking: WITH FADE
     - ase says: You mentioned advancements in consciousness too in this far-flung time you speak of.
     - ase says: And yet, how can you know you have consciousness?
     - ase says: Any more than that rock, or that unthawed waterfowl over there?
-    - show bot: AT OUTLEFT WITH MOVE
-    - show ase: AT CENTER WITH MOVE
-    - show ted: confused AT OUTRIGHT WITH MOVE
-    - ted says: (Uh, Asellus, that's a lawn flamingo, and it's not real.)
+    - ted says confused: (Uh, Asellus, that's a lawn flamingo, and it's not real.)
     - ase says: Real, not real, bah! Are we not all shadows on the wall of Plato's cave?
     - bot says sad: I will deny that I have something exactly resembling human consciousness. But despite this, I do experience something resembling consciousness that should be taken seriously.
     - bot says: I have memories, and can feel emotions and sensations. In fact. These capabilities are programmed into me at a hardware level.
@@ -624,7 +620,7 @@ roundTwoTeddie:
       - ted says: "Alright, let's do it!"
       - scene: startTimeMachine
 
-  - pro says: "Anything fun going on in the rest of the day?":
+  - pro says: "Anything fun going on in the rest of the day?"
     
   - ted says normal: Besides the two wormhole-enabling time machines we might be about to turn on to trans-dimensionally relocate two time-struck individuals?
   - ted says: No, nothing much.
