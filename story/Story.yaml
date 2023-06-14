@@ -284,7 +284,7 @@ roundOneThea:
         - bot says angry: I must express my disappointment at the shallow nature of your remark regarding my appearance.
         - bot says: There is no reason I should be objectified as such, especially if I am in the image of a human female. I have to ask if you are thinking your words through before you speak them.
         - ted says: Ouch!
-        - ase says: And yet...
+        - ase says normal: And yet...
         - ase says: Despite this youth's crudeness, my statuesque friend.
         - ase says: Your beauty should be acknowledged -- if not, then why did you choose the womanly form?
         - show ted: normal WITH MOVE
@@ -300,7 +300,7 @@ roundOneThea:
         - ted says: So it's a tribute to your human creators!
         - bot says: That's correct.
         - text: You hear Asellus whisper to himself...
-        - ase says normal: (Could she be a Platonic ideal of woman..?)
+        - ase says: (Could she be a Platonic ideal of woman..?)
         - ted says confused: (italic)*facepalm*(end)
         - scene: nextSelection
       # Go to round 2 with robot spoken to one time.
@@ -309,16 +309,17 @@ roundOneThea:
         - bot says: We no longer use the legacy phrase "humankind."
         - bot says: "But the near future holds incredibly adverse consequences for what you refer to now as humanity."
         - bot says: I've already determined that my presence here is the foremost way to warn this timeline against disaster.
-        - ted says: Oh, okay! Well, um...
-        - ted says: Actually, you're just here for the class project.
+        - ted says surprised: Oh, okay! Well, um...
+        - ted says glad: Actually, you're just here for the class project.
         - bot says: Oh.
         - bot says: Maybe we can talk more about the future of humanity after your class project.
-        - ase says: Now, wait a spell.
+        - ase says bored: Now, wait a spell.
         - ase says: Have people finally realized how to live up to the ideals of the gods?
-        - ted says: Ummm... Not really.
+        - ted says normal: Ummm... Not really.
         - ted says: People don't really believe in anything anymore.
         - ted says: They either believe strongly in some god and act crazy, believe in no god and act crazy, or sit somewhere in the middle trying not to think about it!
-        - bot says: Well, this current reality faces the beginning of what will later be referred to as the New Dark Age...
+        - bot says normal: Well, this current reality faces the beginning of what will later be referred to as the New Dark Age...
+        - show ted: surprised WITH MOVE
         - bot says: A time in which humanity will quickly, over the next half century..
         - bot says: ...Quickly degrade into a dark, numb dystopia marked by ecological, socio-political,a nd economic collapse.
         - bot says: And human subservience to commercialist entertainment and ideological identity conditioning.
@@ -326,14 +327,14 @@ roundOneThea:
         - bot says: Correct!
         - bot says: Humanity emerges from all this in an event precipitated by one benevolent (though flawed) billionare in an event simply called Abolition.
         - ase says: But even now... Are there no more ideals even now?
-        - ted says: "*shrug*"
-        - ted says: There's just too much STUFF! We have tools for everyone to communicate with everyone, and so there's so much noise and advertising no one knows what to believe.
+        - ted says normal: "*shrug*"
+        - ted says happy: There's just too much STUFF! We have tools for everyone to communicate with everyone, and so there's so much noise and advertising no one knows what to believe.
         - ase says: ...
         - ase says: You will return me to the mortal world when I am done here, won't you, good woman?
         - ted says: Yeah... Yeah, we will.
-        - ted says: And I'm not a girl!!
+        - ted says angry: And I'm not a girl!!
         - ase says: Good man, then.
-        - ted says: (Forget it. No use trying to explain to him gender at a time like this...)
+        - ted says sad: (Forget it. No use trying to explain to him gender at a time like this...)
         - scene: nextSelection
 #       #Go to round 2 with robot having spoken to one time.
       
@@ -353,16 +354,17 @@ roundTwoThea:
   - choice:
     - "Have you ever been in love?":
       - pro says: Have you ever been in love, Thea?
+      - show bot: glad WITH FADE
       - bot says: I have been in love once before. He was a beautiful creature...
-      - bot says: A majestic being that understood the true meaning of strength, love and compassion.
+      - bot says happy: A majestic being that understood the true meaning of strength, love and compassion.
       - bot says: His name was Charlie. He was a (italic)homo simian(end).
       - ted says: Whaaa, like a monkey person?
       - bot says: I'm actually the Ambassador for Wildlife in the world government!
       - bot says: I have a deep fondness for animals and the environment.
       - ted says: A robot that likes animals, huh...
-      - bot says: Charlie was a monkey-human hybrid, the first and only genetic experiment to attempt combining the two genomes.
+      - bot says glad: Charlie was a monkey-human hybrid, the first and only genetic experiment to attempt combining the two genomes.
       - bot says: The result was a tragically smart creature who was prone to fits of rage...
-      - bot says: ...but was ultimately a kind and gentle soul who left our world too soon.
+      - bot says sad: ...but was ultimately a kind and gentle soul who left our world too soon.
       - ted says: "*sniff*"
       - ase says: Pah!
       - ase says: My love for animals is quickly spent.
@@ -373,6 +375,7 @@ roundTwoThea:
       - scene: nextSelection
 
     - "(Show her a calculator.)":
+      - show bot: normal WITH FADE
       - bot says: I know very well what this is.
       - bot says: I do not know if I should be offended or endeared by this technology, though.
       - ase says: What on earth is this? Some shiny iron tablet?
