@@ -1005,58 +1005,60 @@ roundTwoAsellus:
     - "Show him Doja Cat.":
       - pro says: (You show Asellus a Doja Cat music video).
 
-      - ase says: What... A tiny Egyptian in glass.
+      - show ase: AT LEFT WITH FADE
+      - ase says normal: What... A tiny Egyptian in glass.
       
-      - ted says: No, Asellus, she's not Egyptian.
+      - show ted: AT RIGHT WITH FADE
+      - ted says confused: No, Asellus, she's not Egyptian.
 
       - ase says: From the shores of Ethiopia, then.
 
-      - ted says: No, no, she's... Let's see here...
+      - ted says normal: No, no, she's... Let's see here...
       - ted says: Oh, she's Jewish and South African.
-      - ted says: Yeah, he's not gonna understand either one of those.
+      - ted says confused: Yeah, he's not gonna understand either one of those.
 
-      - ase says: Such flowing movements... Dazzling dances.. Strange and sweet sounds...
+      - ase says embarrassed: Such flowing movements... Dazzling dances.. Strange and sweet sounds...
       - ase says: and the light and color... an Amazon fit to sit at the table of Dionysus himself.
 
-      - ted says: Yeah, this thing you're seeing her on is called a "phone".
+      - ted says normal: Yeah, this thing you're seeing her on is called a "phone".
 
-      - ase says: With it, people from all over the world can see and share things like this with each other...
+      - ase says bored: With it, people from all over the world can see and share things like this with each other...
 
       - ase says: From ideas about philosophy to music to opinions on politics and entertainment!
 
-      - ase says: An exchange of ideas...
+      - ase says normal: An exchange of ideas...
 
       - ase says: (Asellus definitely isn’t listening. He is WAY overstimulated watching Doja.)
 
       - ase says: Can I be seen? And is there a way to remove her from the glass?
 
-      - ted says: Er...
+      - ted says confused: Er...
 
       - ase says: ..She moves with such grace for such a shrunken Amazon.
-      - ase says: Is her soul bound in glass forever?
+      - ase says bored: Is her soul bound in glass forever?
 
       - ted says: No, it's just a video. It's a recording of color and sound.
 
       - ase says: "..."    
-      - ase says: (Asellus’ gears are turning at full speed in his brain.)
+      - ase says normal: (Asellus’ gears are turning at full speed in his brain.)
 
-      - ase says: All the beauties of Egypt and beyond, delivered right before my very eyes...!
+      - ase says happy: All the beauties of Egypt and beyond, delivered right before my very eyes...!
 
-      - ase says: Hm?
+      - ase says normal: Hm?
 
       - ase says: What is that yellow monolith she dances besides?
 
-      - ted says: Oh, that's... The video is a tie-in with Nilla Wafers.
+      - ted says normal: Oh, that's... The video is a tie-in with Nilla Wafers.
 
       - ase says: What is Nilla?
 
       - ted says: It's kind of like, a sweet bread.
 
-      - ase says: What does an Egyptian Queen have to do meddling with some lowly bread merchant?
+      - ase says bored: What does an Egyptian Queen have to do meddling with some lowly bread merchant?
 
-      - ted says: Not even going to (italic)try(end) to explain that one.
+      - ted says normal: Not even going to (italic)try(end) to explain that one.
 
-      - ase says: Regardlesss... This Doja Cat...
+      - ase says normal: Regardlesss... This Doja Cat...
       - ase says: Δωα κατ…
       - ase says: I will bring word of her beauty back to Athens.
 
@@ -1065,10 +1067,11 @@ roundTwoAsellus:
 
     - "Have they ever made a statue of you?":
       - pro says: Have they ever made a statue in your image, Asellus?
-      - ase says: In my image, no.
+      - ase says bored: In my image, no.
       - ase says: Though I (italic)have(end) modeled nude for a sculptor before!
-      - ted says: Cool!
-      - ase says: It was arduous work to remain in the same pose for so long.
+      - show ted: AT RIGHT WITH FADE
+      - ted says surprised: Cool!
+      - ase says normal: It was arduous work to remain in the same pose for so long.
       - ase says: And I had to spend weeks speaking with the great poets and fellow philosophers of my time...
       - ase says: Questioning the very nature of the gods themselves, to fully get into character...
       - ase says: As a model of the divine!
@@ -1077,38 +1080,50 @@ roundTwoAsellus:
 
       - ted says: Awesome!!
 
-      - bot says: How utterly interesting!
+      - hide ted:
+      - show bot: AT RIGHT WITH FADE
+      - bot says confused: How utterly interesting!
 
       - ase says: ...Mostly.
 
-      - ted says: Mostly?
+      - hide bot:
+      - show ted: AT RIGHT WITH FADE
+      - ted says confused: Mostly?
 
-      - ase says: Well, Polykleitos took some, er, artistic liberties when making the sculpture.
+      - ase says embarrassed: Well, Polykleitos took some, er, artistic liberties when making the sculpture.
 
       - ted says: What do you mean?
 
       - ase says: I was- hm- told that I took "too big of a seat" for the statue to be modeled completely after me.
 
       - ted says: So, like.
-      - ted says: Your butt was too big??
+      - ted says surprised: Your butt was too big??
 
+      - hide ted:
+      - show bot: AT RIGHT WITH FADE
       - bot says: There would be no room for derriere like that with the toned, muscular,
       - bot says: masculinity-focused beauty standards of ancient Greece!
 
-      - ted says: Also, Asellus, are you not a cool enough philosopher to have your own statue?
+      - hide bot:
+      - shot ted: AT RIGHT WITH FADE
+      - ted says confused: Also, Asellus, are you not a cool enough philosopher to have your own statue?
 
       - pro says: (Gosh, Teddie, way to go for the jugular...)
 
-      - ase says: No, no... All everyone wants to do is make statues of Socrates, but he's ugly as an ass.
+      - ase says normal: No, no... All everyone wants to do is make statues of Socrates, but he's ugly as an ass.
 
+      - hide ted:
+      - show bot: AT RIGHT WITH FADE
       - bot says: And, as I will add, many statues of philosophers and noble people were typically unrealistically idealized,
       - bot says: As well as often crafted after a person's death.
 
-      - ted says: With normal-sized butts.
+      - hide bot:
+      - show ted: AT RIGHT WITH FADE
+      - ted says glad: With normal-sized butts.
       
       - ase says: Quiet!
 
-      - ted says: Teehee!
+      - ted says happy: Teehee!
 
       - scene: nextSelection
 
