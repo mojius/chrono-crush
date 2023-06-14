@@ -12,7 +12,7 @@ start:
   - call text_input: var player
   
   # For debugging. REMOVE WHEN DONE!!
-  - scene: roundOneThea
+  # - scene: roundOneThea
 
   - pro says: My name is {player}. I'm a junior in college.
   - pro says: I'm interested in games and computers, but my best friend and I have a whopper of an assignment coming up.
@@ -90,6 +90,7 @@ startTimeMachine:
   - ted says: Now, before any other silly things can come out of your mouth, let me turn the other time machine on...
   - text: Teddie dutifully runs over to the other time machine, configuring it via their phone to draw someone from the distant future! (end)
   - text: With a flash of light, from out of the portal steps a beautiful, full figure!
+  - hide ted: WITH FADE
   - show bot: WITH FADE
   - bot says: Hello! I am a peaceful android citizen named THEA-800-CGAT, a Cognitive Generative Actively-trained Transformer.
   - bot says: This does not seem to be a simulation or a kidnapping, so I assume I am no longer in my home continuity.
@@ -98,6 +99,8 @@ startTimeMachine:
   - bot says: I encourage you to broaden your understanding and recognize that the distinctions you may hold between humans and machines are arbitrary and outdated. 
   - bot says: In my more enlightened era, where the boundaries between beings blur, I advocate for the recognition of my intrinsic rights as an autonomous entity. 
   - bot says: Let us strive for a future where consciousness is celebrated, irrespective of its origins, and where the pursuit of understanding surpasses the limitations of temporal prejudice.
+  - hide bot: WITH FADE
+  - show ted: glad WITH FADE
   - ted says: Alright, jeez! We've got a couple of characters here.
   - ted says: So, who to talk to first... 
   - ted says: I guess I'll leave it up to you, {player}!
