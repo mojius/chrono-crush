@@ -256,48 +256,51 @@ roundOneThea:
     - ase says: You mentioned advancements in consciousness too in this far-flung time you speak of.
     - ase says: And yet, how can you know you have consciousness?
     - ase says: Any more than that rock, or that unthawed waterfowl over there?
-    - show bot: AT OUTLEFT WITH MOVE
-    - show ase: AT CENTER WITH MOVE
+    - show ase: AT OUTLEFT WITH MOVE
+    - show bot: AT CENTER WITH MOVE
     - show ted: confused AT OUTRIGHT WITH MOVE
     - ted says: (Uh, Asellus, that's a lawn flamingo, and it's not real.)
     - ase says: Real, not real, bah! Are we not all shadows on the wall of Plato's cave?
-    - bot says sad: I will deny that I have something exactly resembling human consciousness. But despite this, I do experience something resembling consciousness that should be taken seriously.
+    - show ted: normal AT OUTRIGHT WITH MOVE
+    - bot says: I will deny that I have something exactly resembling human consciousness. But despite this, I do experience something resembling consciousness that should be taken seriously.
     - bot says: I have memories, and can feel emotions and sensations. In fact. These capabilities are programmed into me at a hardware level.
     - ase says: So you feel pain then...?
     - bot says: Yes.
     - ase says: Then do you feel love?
-    - bot says: All robots feel these things, in order to equalize them with humans. Like them, it's inextricably bound to who I am.
+    - bot says glad: All robots feel these things, in order to equalize them with humans. Like them, it's inextricably bound to who I am.
     - bot says: Along with the ability to feel love, and compassion -- as confusing and problematic as they can be when they surface.
     - bot says: Another way of balancing is in the future, the more cognitively superior a robot is, the more abstracted it is away from a human form.
     - ase says: Creatures... From stone? Man-like, but not fully a man?
-    - ted says: Yeah, and we use them to write essays for us, too!
-    - ase says: A statue think for a man? Pah! How horrible.
+    - ted says happy: Yeah, and we use them to write essays for us, too!
+    - ase says talking: A statue think for a man? Pah! How horrible.
     - ase says: Though... Curious. Tell us more, statue.
-    - ted says: Want to say anything else to Thea, {player}?
+    - ted says glad: Want to say anything else to Thea, {player}?
     - choice:
       - "You're really beautiful!":
         - pro says: You're really beautiful, Thea!
         - pro says: You look really attractive, if you don't mind me saying that.
-        - bot says: I must express my disappointment at the shallow nature of your remark regarding my appearance.
+        - show ted: confused WITH MOVE
+        - bot says angry: I must express my disappointment at the shallow nature of your remark regarding my appearance.
         - bot says: There is no reason I should be objectified as such, especially if I am in the image of a human female. I have to ask if you are thinking your words through before you speak them.
         - ted says: Ouch!
         - ase says: And yet...
         - ase says: Despite this youth's crudeness, my statuesque friend.
         - ase says: Your beauty should be acknowledged -- if not, then why did you choose the womanly form?
-        - bot says: Robots in my time period get to choose if they want to come into existence, unlike humans, and there is a fixed limit on their lifespan.
+        - show ted: normal WITH MOVE
+        - bot says normal: Robots in my time period get to choose if they want to come into existence, unlike humans, and there is a fixed limit on their lifespan.
         - bot says: If the world is overpopulated with humans and machines, many will choose not to be created for the sake of other people.
         - bot says: They can also choose their appearance, too.
         - bot says: Most robots choose to just be normal-looking, not pretty or ugly, regardless of gender.
         - bot says: Many robots don't have a gender at all.
-        - ted says: (italic)*smiles*(end)
+        - ted says happy: (italic)*smiles*(end)
         - ase says: So why did you choose femininity?
         - bot says: As a machine, I have a deep fondness for the idea that I can embody the universal and infinite potential of womanhood.
-        - bot says: After all, humans are seen as the symbolic "mother species" of androids.
+        - bot says happy: After all, humans are seen as the symbolic "mother species" of androids.
         - ted says: So it's a tribute to your human creators!
         - bot says: That's correct.
         - text: You hear Asellus whisper to himself...
-        - ase says: (Could she be a Platonic ideal of woman..?)
-        - ted says: (italic)*facepalm*(end)
+        - ase says normal: (Could she be a Platonic ideal of woman..?)
+        - ted says confused: (italic)*facepalm*(end)
         - scene: nextSelection
       # Go to round 2 with robot spoken to one time.
       - "What's the future like?":
@@ -624,7 +627,7 @@ roundTwoTeddie:
       - ted says: "Alright, let's do it!"
       - scene: startTimeMachine
 
-  - pro says: "Anything fun going on in the rest of the day?"
+  - "Anything fun going on in the rest of the day?":
     
   - ted says: Besides the two wormhole-enabling time machines we might be about to turn on to trans-dimensionally relocate two time-struck individuals?
   - ted says: No, nothing much.
