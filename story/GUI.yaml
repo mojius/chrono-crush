@@ -101,6 +101,10 @@ config:
         asset: loaderbackground
       - type: music
         asset: Evan_Schaeffer_-_01_-_Aqueduct
+      - type: image
+        x: 0
+        'y': 200
+        asset: asellus0
       - type: button
         x: 77
         'y': 452
@@ -294,9 +298,13 @@ config:
         binding: return
 assets:
   images:
+   
     loaderbackground:
       name: loaderbackground
       fileName: ChronoCrushTitle.png
+    asellus0:
+      name: Asellus0
+      fileName: Asellus0.png
     asset16:
       name: asset16
       fileName: saveloadasset16.png
