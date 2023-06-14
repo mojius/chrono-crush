@@ -45,5 +45,6 @@ Here are our three selectable Requirements for the game:
 ### Asset Credits
 - Writing by Ben Daly
 - Thea's and Teddie's images by Cassidy Aydin
-- Asellus' images and menu logo by Brandon Jack
+- Asellus' images, menu logo, and background by Brandon Jack
 - Music by Evan Schaeffer
+- renjs default assets (GUI) by lunafromthemoon
