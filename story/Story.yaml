@@ -13,7 +13,7 @@ start:
   
   # For debugging. REMOVE WHEN DONE!!
   # - scene: roundOneThea
-  - scene: confessionTwoAsellus
+  #- scene: confessionTwoAsellus
 
   - pro says: My name is {player}. I'm a junior in college.
   - pro says: I'm interested in games and computers, but my best friend and I have a whopper of an assignment coming up.
