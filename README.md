@@ -47,4 +47,4 @@ Here are our three selectable Requirements for the game:
 - Thea's and Teddie's images by Cassidy Aydin
 - Asellus' images, menu logo, and background by Brandon Jack
 - Music by Evan Schaeffer
-- renjs default assets (GUI) by lunafromthemoon
+- RenJS default assets (GUI) by lunafromthemoon
