@@ -35,3 +35,14 @@ Here are our three selectable Requirements for the game:
   - In the file `text_log.js`, we use the Phaser.Graphics class in order to set up the scene for our text log. We make an empty graphic to disable interaction with the main game's HUD, then create a text log of previous messages.
 - Narrative Tech Integration
   - With RenJS, we use the `Story.yaml` file to write out our story. With different formats and commands for each line, certain story points in the game will feel more alive with the text on-screen.
+
+  ### Contributor Credits
+  - Production Lead: Ben Daly
+  - Technology Lead: Addison Camacho
+  - Testing Lead: Cassidy Aydin
+  - Backup Production Lead: Brandon Jack
+
+  ### Asset Credits
+  - Writing by Ben Daly
+  - Thea's and Teddie's images by Cassidy Aydin
+  - Asellus' images and menu logo by Brandon Jack
