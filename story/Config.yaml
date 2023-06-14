@@ -1,6 +1,6 @@
 positions:
   OUTLEFT: #Outside of the screen, left side
-    x: -133
+    x: 133
     y: 600 #The y should be at the bottom of the screen
   LEFT: 
     x: 233
@@ -15,7 +15,7 @@ positions:
     x: 566
     y: 600
   OUTRIGHT: #Outside of the screen, right side
-    x: 933
+    x: 633
     y: 600
 
 transitions:
