@@ -46,3 +46,4 @@ Here are our three selectable Requirements for the game:
 - Writing by Ben Daly
 - Thea's and Teddie's images by Cassidy Aydin
 - Asellus' images and menu logo by Brandon Jack
+- Music by Evan Schaeffer
