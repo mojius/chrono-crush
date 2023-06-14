@@ -497,11 +497,12 @@ roundOneTeddie:
       - pro says: "Nevermind, I think it's time to start up this time machine..."
       - ted says: "Alright, let's do it!"
       - scene: startTimeMachine
+  - show ted normal:
   - pro says: Ugh, the assignment due date is so close... And I feel like we're really behind on the work...
   - pro says: And now there's about to be two people from across the space-time continuum in your backyard, Teddie...
-  - pro says: Which might not be such a good idea!
-  - ted says: It'll be alright, {player}. 
-  - ted says: We'll get the info we want out of them for the project, and then send them both home.
+  - pro says : Which might not be such a good idea!
+  - ted says glad: It'll be alright, {player}. 
+  - ted says happy: We'll get the info we want out of them for the project, and then send them both home.
   - text: You glance at Teddie for a moment, and a lot passes through your mind in that short time.
   - text: You and Teddie both transferred to the University of California San Jose, and are housemates.
   - text: But they don't feel like they totally fit in here.
@@ -518,10 +519,10 @@ roundOneTeddie:
   - choice:
     - "Ask what that sweet smell is.":
       - pro says: Teddie, what smells like strawberries and lemon?
-      - ted says: Oh, I've been using a new soap, but it's really strong, haha.
-      - ted says: It's actually the one you got me for my birthday a month ago... The Deadpool Super Sex Soap bar.
+      - ted says surprised: Oh, I've been using a new soap, but it's really strong, haha.
+      - ted says grin: It's actually the one you got me for my birthday a month ago... The Deadpool Super Sex Soap bar.
       - pro says: (That's right... It was kind of a meme gift, but it was a good fakeout before showing them the RTX 3060 you got them.)
-      - ted says: Thanks for noticing, {player}!
+      - ted says grin: Thanks for noticing, {player}!
       - text: The two of you laugh about this because it's kind of a weird thing to nice. Sigh...
       - ted says: How the heck are we going to do this if the time machine doesn't work? Maybe just google a bunch of words on the past and future from various philosophers throughout history? 
       - ted says: Get ChatGPT to come up with something?
@@ -1197,9 +1198,9 @@ postRoundTeddy:
   - choice:
     - "Confess to Teddy":
       - scene: confessionThreeTeddy
-    - "Talk to Theddy":
+    - "Talk to Teddy":
       # Fill in dialogue
-      - "Shouldn't you be talking to our wonderful guests?"
+      - ted says: "Shouldn't you be talking to our wonderful guests?"
       - scene: postRoundTeddy
     - "Nevermind, it's nothing":
       - scene: nextSelection
