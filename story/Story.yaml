@@ -1136,18 +1136,18 @@ confessionZeroAsellus:
   - pro says: I think you're dashing!
   - pro says: I'd love to go on a date with you!
 
-  - ase says: I'm flattered!
-  - ase says: But your comment stirs up more interesting questions in me.
+  - ase says embarrassed: I'm flattered!
+  - ase says normal: But your comment stirs up more interesting questions in me.
   - ase says: What is "love at first sight?" Did you have it just now?
   - ase says: an it really be so simple, or is it only something the gods can bestow upon us?
   - ase says: And if you have never been in love, how can you say you know when you're in love?
 
-  - ase says: Who's to say I'm not in love with you now, and I don't know?
+  - ase says bored: Who's to say I'm not in love with you now, and I don't know?
   - ase says: Aphrodite is a complex being, whose many turns and fancies often deprive us of 
   - ase says: --knowing our true feelings.
   - ase says: And what is a date? A time to love? To get acquainted with another? 
   - ase says: Are we not all “dating” each other right now merely by talking to one another?
-  - ase says: Then why make it concrete? Do we simply love tradition? But do we love tradition more than each other?
+  - ase says normal: Then why make it concrete? Do we simply love tradition? But do we love tradition more than each other?
   - text: (He endlessly asks questions until you drift off, almost to sleep.)
   - text: (That was a sily idea, anyway…)
   - endgame:
@@ -1231,6 +1231,7 @@ confessionTwoAsellus:
 
 
 postRoundThea:
+  - show bot:
   - text says: "What did you want to talk about?"
   - choice:
     - "Confess to Thea":
@@ -1244,6 +1245,7 @@ postRoundThea:
 
 
 postRoundAsellus:
+  - show ase:
   - text says: "What did you want to talk about?"
   - choice:
     - "Confess to Asellus":
@@ -1257,6 +1259,7 @@ postRoundAsellus:
 
 
 postRoundTeddy:
+  - show ted:
   - text says: "What did you want to talk about?"
   - choice:
     - "Confess to Teddie":
